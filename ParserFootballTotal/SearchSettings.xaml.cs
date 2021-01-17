@@ -10,20 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ParserFootballTotal
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SearchSettings.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SearchSettings : Window
     {
-        public MainWindow()
+        public SearchSettings()
         {
             InitializeComponent();
         }
-
     }
 }

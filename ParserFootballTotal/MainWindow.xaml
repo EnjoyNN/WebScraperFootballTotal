@@ -5,8 +5,113 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParserFootballTotal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="PARSER FOOTBALL TOTAL" Height="558" Width="986" Icon="png_ico_try2.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="textBlockStyle" TargetType="TextBlock">
+            <Setter Property="Width" Value="144"/>
+            <Setter Property="MaxWidth" Value="144"/>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="2342342342.png" Stretch="UniformToFill"/>
+    </Window.Background>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         
+        
+        <Label x:Name="labelPanelForCheckBoxes" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="280" Width="951" BorderBrush="Black" OpacityMask="Black" Background="White"/>
+
+        <CheckBox x:Name="cbFirstTimeInAwayTotalUnder05" Content="&lt; 0,5 1-й Тайм Гости" HorizontalAlignment="Left" Margin="176,77,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAwayTotalUnder05" Content="&lt; 0,5 2-й Тайм Гости" HorizontalAlignment="Left" Margin="333,77,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInAwayTotalUnder15" Content="&lt; 1,5 Матч Гости" HorizontalAlignment="Left" Margin="490,77,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInAwayTotalUnder15" Content="&lt; 1,5 1-й Тайм Гости" HorizontalAlignment="Left" Margin="647,77,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAwayTotalUnder15" Content="&lt; 1,5 2-й Тайм Гости" HorizontalAlignment="Left" Margin="804,77,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInAllTotalUnder25" Content="&lt; 2,5 1-й Тайм Всего" HorizontalAlignment="Left" Margin="176,108,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAllTotalUnder25" Content="&lt; 2,5 2-й Тайм Всего" HorizontalAlignment="Left" Margin="333,108,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInAllCleanSheets" Content="Не проп Матч Всего" HorizontalAlignment="Left" Margin="490,108,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInAllCleanSheets" Content="Не проп 1-й Тайм Всего" HorizontalAlignment="Left" Margin="647,108,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAllCleanSheets" Content="Не проп 2-й Тайм Всего" HorizontalAlignment="Left" Margin="804,108,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInAllTotalUnder05" Content="&lt; 0,5 1-й Тайм Всего" HorizontalAlignment="Left" Margin="176,15,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAllTotalUnder05" Content="&lt; 0,5 2-й Тайм Всего" HorizontalAlignment="Left" Margin="333,15,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInAllTotalUnder15" Content="&lt; 1,5 Матч Всего" HorizontalAlignment="Left" Margin="490,15,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInAllTotalUnder15" Content="&lt; 1,5 1-й Тайм Всего" HorizontalAlignment="Left" Margin="647,15,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAllTotalUnder15" Content="&lt; 1,5 2-й Тайм Всего" HorizontalAlignment="Left" Margin="804,15,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInHomeTotalUnder05" Content="&lt; 0,5 1-й Тайм Дома" HorizontalAlignment="Left" Margin="176,46,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInHomeTotalUnder05" Content="&lt; 0,5 2-й Тайм Дома" HorizontalAlignment="Left" Margin="333,46,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInHomeTotalUnder15" Content="&lt; 1,5 Матч Дома" HorizontalAlignment="Left" Margin="490,46,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInHomeTotalUnder15" Content="&lt; 1,5 1-й Тайм Дома" HorizontalAlignment="Left" Margin="647,46,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInHomeTotalUnder15" Content="&lt; 1,5 2-й Тайм Дома" HorizontalAlignment="Left" Margin="804,46,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInAllFailedToScore" Content="Не забив 1-й Тайм Всего" HorizontalAlignment="Left" Margin="176,201,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAllFailedToScore" Content="Не забив 2-й Тайм Всего" HorizontalAlignment="Left" Margin="333,201,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy27" Content="Не забивали Дома Оба" HorizontalAlignment="Left" Margin="490,201,0,0" VerticalAlignment="Top" Foreground="Black" Opacity="0.35" Background="#FF95F586"/>
+        <CheckBox x:Name="checkBox_Copy28" Content="Не забивали Дома Оба" HorizontalAlignment="Left" Margin="647,201,0,0" VerticalAlignment="Top" Foreground="Black" Opacity="0.35" Background="#FF95F586"/>
+        <CheckBox x:Name="checkBox_Copy29" Content="Не забивали Дома Оба" HorizontalAlignment="Left" Margin="804,201,0,0" VerticalAlignment="Top" Foreground="Black" Opacity="0.35" Background="#FF95F586"/>
+        <CheckBox x:Name="cbFirstTimeInHomeFailedToScore" Content="Не забив 1-й Тайм Дома" HorizontalAlignment="Left" Margin="176,232,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInHomeFailedToScore" Content="Не забив 2-й Тайм Дома" HorizontalAlignment="Left" Margin="333,232,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy33" Content="Не забивали Дома Оба" HorizontalAlignment="Left" Margin="490,232,0,0" VerticalAlignment="Top" Foreground="Black" Opacity="0.35" Background="#FF95F586"/>
+        <CheckBox x:Name="checkBox_Copy34" Content="Не забивали Дома Оба" HorizontalAlignment="Left" Margin="647,232,0,0" VerticalAlignment="Top" Foreground="Black" Opacity="0.35" Background="#FF95F586"/>
+        <CheckBox x:Name="checkBox_Copy35" Content="Не забивали Дома Оба" HorizontalAlignment="Left" Margin="804,232,0,0" VerticalAlignment="Top" Foreground="Black" Opacity="0.35" Background="#FF95F586"/>
+        <CheckBox x:Name="cbFirstTimeInHomeTotalUnder25" Content="&lt; 2,5 1-й Тайм Дома" HorizontalAlignment="Left" Margin="176,139,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInHomeTotalUnder25" Content="&lt; 2,5 2-й Тайм Дома" HorizontalAlignment="Left" Margin="333,139,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInHomeCleanSheets" Content="Не проп Матч Дома" HorizontalAlignment="Left" Margin="490,139,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInHomeCleanSheets" Content="Не проп 1-й Тайм Дома" HorizontalAlignment="Left" Margin="647,139,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInHomeCleanSheets" Content="Не проп 2-й Тайм Дома" HorizontalAlignment="Left" Margin="804,139,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInAwayTotalUnder25" Content="&lt; 2,5 1-й Тайм Гости" HorizontalAlignment="Left" Margin="176,170,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAwayTotalUnder25" Content="&lt; 2,5 2-й Тайм Гости" HorizontalAlignment="Left" Margin="333,170,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInAwayCleanSheets" Content="Не проп Матч Гости" HorizontalAlignment="Left" Margin="490,170,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInAwayCleanSheets" Content="Не проп 1-й Тайм Гости" HorizontalAlignment="Left" Margin="647,170,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAwayCleanSheets" Content="Не проп 2-й Тайм Гости" HorizontalAlignment="Left" Margin="804,170,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbFirstTimeInAwayFailedToScore" Content="Не забив 1-й Тайм Гости" HorizontalAlignment="Left" Margin="176,263,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbSecondTimeInAwayFailedToScore" Content="Не забив 2-й Тайм Гости" HorizontalAlignment="Left" Margin="333,263,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_Copy51" Content="Не забивали Дома Оба" HorizontalAlignment="Left" Margin="490,263,0,0" VerticalAlignment="Top" Foreground="Black" Opacity="0.35" Background="#FF95F586"/>
+        <CheckBox x:Name="checkBox_Copy52" Content="Не забивали Дома Оба" HorizontalAlignment="Left" Margin="647,263,0,0" VerticalAlignment="Top" Foreground="Black" Opacity="0.35" Background="#FF95F586"/>
+        <CheckBox x:Name="checkBox_Copy53" Content="Не забивали Дома Оба" HorizontalAlignment="Left" Margin="804,263,0,0" VerticalAlignment="Top" Foreground="Black" Opacity="0.35" Background="#FF95F586"/>
+        <CheckBox x:Name="cbAllMatchInAwayTotalUnder05" Content="&lt; 0,5 Матч Гости" HorizontalAlignment="Left" Margin="19,77,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInAllTotalUnder25" Content="&lt; 2,5 Матч Всего" HorizontalAlignment="Left" Margin="19,108,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInAllTotalUnder05" Content="&lt; 0,5 Матч Всего" HorizontalAlignment="Left" Margin="19,15,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInHomeTotalUnder05" Content="&lt; 0,5 Матч Дома" HorizontalAlignment="Left" Margin="19,46,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInAllFailedToScore" Content="Не забив Матч Всего" HorizontalAlignment="Left" Margin="19,201,0,0" VerticalAlignment="Top" Background="#FF97FF5B" Foreground="Black" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInHomeFailedToScore" Content="Не забив Матч Дома" HorizontalAlignment="Left" Margin="19,232,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInHomeTotalUnder25" Content="&lt; 2,5 Матч Дома" HorizontalAlignment="Left" Margin="19,139,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInAwayTotalUnder25" Content="&lt; 2,5 Матч Гости" HorizontalAlignment="Left" Margin="19,170,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <CheckBox x:Name="cbAllMatchInAwayFailedToScore" Content="Не забив Матч Гости" HorizontalAlignment="Left" Margin="19,263,0,0" VerticalAlignment="Top" Foreground="Black" Background="#FF97FF5B" IsChecked="True"/>
+        <ProgressBar x:Name="progrssBarMain" Height="25" Margin="10,435,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="951"/>
+        
+        <Button x:Name="buttonSearchSettings" HorizontalAlignment="Left" Margin="10,375,0,0" VerticalAlignment="Top" Width="144" Height="40" BorderBrush="Black" Foreground="Black">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.473"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <TextBlock Style="{StaticResource textBlockStyle}" TextAlignment="Center">Настройки поиска</TextBlock>
+        </Button>
+
+        <Button x:Name="buttonStartThreeDays" HorizontalAlignment="Left" Margin="751,375,0,0" VerticalAlignment="Top" Width="210" Height="40" BorderBrush="Black" Foreground="Black">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.473"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <TextBlock TextAlignment="Center" Width="210">Спарсить матчи на Сегодня, Завтра,<LineBreak/>Послезавтра и выгрузить в Excel</TextBlock>
+        </Button>
+
+        <Button x:Name="buttonStartToday" HorizontalAlignment="Left" Margin="544,375,0,0" VerticalAlignment="Top" Width="175" Height="40" BorderBrush="Black" Foreground="Black">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.473"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <TextBlock TextAlignment="Center" Width="175">Спарсить матчи на Сегодня<LineBreak/>и выгрузить в Excel</TextBlock>
+        </Button>
+        <Label x:Name="labelStatus" Content="Статус: Не работает" HorizontalAlignment="Left" Margin="419,481,0,0" VerticalAlignment="Top" Width="142" Background="White"/>
+
     </Grid>
 </Window>
