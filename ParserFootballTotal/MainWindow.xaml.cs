@@ -25,5 +25,27 @@ namespace ParserFootballTotal
             InitializeComponent();
         }
 
+        private void ToolBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void buttonMin_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void buttonX_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonSearchSettings_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

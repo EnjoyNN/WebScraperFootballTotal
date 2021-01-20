@@ -113,5 +113,14 @@
   <ItemGroup>
     <Resource Include="png_ico_try2_JNE_icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\buttonMinActivePFT.png" />
+    <Resource Include="Source\buttonMinNonActivePFT.png" />
+    <Resource Include="Source\buttonXActivePFT.png" />
+    <Resource Include="Source\buttonXNonActivePFT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\logoPng.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
