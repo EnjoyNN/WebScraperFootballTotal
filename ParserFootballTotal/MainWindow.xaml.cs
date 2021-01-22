@@ -45,7 +45,10 @@ namespace ParserFootballTotal
 
         private void buttonSearchSettings_Click(object sender, RoutedEventArgs e)
         {
-
+            SearchSettings searchSettingWindow = new SearchSettings();
+            this.Hide();
+            searchSettingWindow.ShowDialog();
+            this.Show();
         }
     }
 }

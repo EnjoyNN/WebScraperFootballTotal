@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParserFootballTotal"
         mc:Ignorable="d"
-        Title="PARSER FOOTBALL TOTAL" Height="540" Width="1000" Icon="png_ico_try2.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+        Title="PARSER FOOTBALL TOTAL" Height="540" Width="1000" Icon="Source/png_ico.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
     <Window.Resources>
         <Style x:Key="textBlockStyle" TargetType="TextBlock">
             <Setter Property="Width" Value="144"/>
@@ -19,12 +19,12 @@
         </Style>
     </Window.Resources>
     <Window.Background>
-        <ImageBrush ImageSource="2342342342.png" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="Source/background.png" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="300*"/>
             <RowDefinition Height="60*"/>
             <RowDefinition Height="160*"/>
@@ -119,6 +119,12 @@
                       Content="Не проп Матч Дома" IsChecked="True"/>
             <CheckBox Grid.Row="5" Grid.Column="3" x:Name="cbAllMatchInAwayCleanSheets" 
                       Content="Не проп Матч Гости" IsChecked="True"/>
+            <CheckBox Grid.Row="6" Grid.Column="3" x:Name="cbAllMatchInAllBothFailedToScore" 
+                      Content="Не забивали Оба Матч" IsChecked="True"/>
+            <CheckBox Grid.Row="7" Grid.Column="3" x:Name="cbAllMatchInHomeBothFailedToScore" 
+                      Content="Не забивали Оба Дома" IsChecked="True"/>
+            <CheckBox Grid.Row="8" Grid.Column="3" x:Name="cbAllMatchInAwayBothFailedToScore" 
+                      Content="Не забивали Оба Гости" IsChecked="True"/>
 
             <CheckBox Grid.Row="0" Grid.Column="4" x:Name="cbFirstTimeInAllTotalUnder15" 
                       Content="&lt; 1,5 1-й Тайм Всего" IsChecked="True"/>
@@ -132,6 +138,12 @@
                       Content="Не проп 1-й Тайм Дома" IsChecked="True"/>
             <CheckBox Grid.Row="5" Grid.Column="4" x:Name="cbFirstTimeInAwayCleanSheets"
                       Content="Не проп 1-й Тайм Гости" IsChecked="True"/>
+            <CheckBox Grid.Row="6" Grid.Column="4" x:Name="cbFirstTimeInAllBothFailedToScore" 
+                      Content="Не забив Оба 1-й Тайм" IsChecked="True"/>
+            <CheckBox Grid.Row="7" Grid.Column="4" x:Name="cbFirstTimeInHomeBothFailedToScore" 
+                      Content="Не заб Оба 1-й Т Дома" IsChecked="True"/>
+            <CheckBox Grid.Row="8" Grid.Column="4" x:Name="cbFirstTimeInAwayBothFailedToScore" 
+                      Content="Не заб Оба 1-й Т Гости" IsChecked="True"/>
 
             <CheckBox Grid.Row="0" Grid.Column="5" x:Name="cbSecondTimeInAllTotalUnder15" 
                       Content="&lt; 1,5 2-й Тайм Всего" IsChecked="True"/>
@@ -145,6 +157,12 @@
                       Content="Не проп 2-й Тайм Дома" IsChecked="True"/>
             <CheckBox Grid.Row="5" Grid.Column="5" x:Name="cbSecondTimeInAwayCleanSheets"
                       Content="Не проп 2-й Тайм Гости" IsChecked="True"/>
+            <CheckBox Grid.Row="6" Grid.Column="5" x:Name="cbSecondTimeInAllBothFailedToScore" 
+                      Content="Не забив Оба 2-й Тайм" IsChecked="True"/>
+            <CheckBox Grid.Row="7" Grid.Column="5" x:Name="cbSecondTimeInHomeBothFailedToScore" 
+                      Content="Не заб Оба 2-й Т Дома" IsChecked="True"/>
+            <CheckBox Grid.Row="8" Grid.Column="5" x:Name="cbSecondTimeInAwayBothFailedToScore" 
+                      Content="Не заб Оба 2-й Т Гости" IsChecked="True"/>
 
         </Grid>
 
@@ -156,7 +174,7 @@
                  900,20,
                  910,0"/>
 
-            <Image Name="logoPng" Source="Source/logoPng.png" Height="13" Width="285">
+            <Image Name="logoPng" Source="Source/logoBlackFill.png" Height="25" Width="285">
             </Image>
             
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
@@ -254,39 +272,31 @@
         <CheckBox x:Name="checkBox_Copy52" Content="Не забивали Дома Оба""/>
         <CheckBox x:Name="checkBox_Copy53" Content="Не забивали Дома Оба""/>-->
 
-        <ProgressBar Grid.Row="3" x:Name="progrssBarMain" Height="25" Margin="10,45,10,10"  Foreground="#FF63C8F1"/>
+        <ProgressBar Grid.Row="3" x:Name="progrssBarMain" Height="25" Margin="10,45,10,10"  
+                     Foreground="#FF63C8F1"/>
 
-        <Button Grid.Row="3" x:Name="buttonSearchSettings" Margin="10,0,0,55" HorizontalAlignment="Left" Width="144" Height="40" BorderBrush="Black" Foreground="Black" Click="buttonSearchSettings_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0.473"/>
-                </LinearGradientBrush>
-            </Button.Background>
+        <Button Grid.Row="3" x:Name="buttonSearchSettings" Margin="10,0,0,55" 
+                HorizontalAlignment="Left" Width="144" Height="40" BorderBrush="Black" 
+                Background="White" Click="buttonSearchSettings_Click">
             <TextBlock Style="{StaticResource textBlockStyle}" TextAlignment="Center">Настройки поиска</TextBlock>
         </Button>
 
-        <Button Grid.Row="3" x:Name="buttonStartThreeDays" HorizontalAlignment="Right" Margin="0,0,10,55" Width="210" Height="40" BorderBrush="Black" Foreground="Black">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0.473"/>
-                </LinearGradientBrush>
-            </Button.Background>
+        <Button Grid.Row="3" x:Name="buttonStartThreeDays" HorizontalAlignment="Right" 
+                Margin="0,0,10,55" Width="210" Height="40" BorderBrush="Black" 
+                Background="White">
             <TextBlock TextAlignment="Center" Width="210">Спарсить матчи на Сегодня, Завтра,<LineBreak/>Послезавтра и выгрузить в Excel</TextBlock>
         </Button>
 
-        <Button Grid.Row="3" x:Name="buttonStartToday" HorizontalAlignment="Right" Margin="0,0,240,55" Width="175" Height="40" BorderBrush="Black" Foreground="Black">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0.473"/>
-                </LinearGradientBrush>
-            </Button.Background>
+        <Button Grid.Row="3" x:Name="buttonStartToday" HorizontalAlignment="Right" 
+                Margin="0,0,240,55" Width="175" Height="40" BorderBrush="Black" 
+                Background="White">
             <TextBlock TextAlignment="Center" Width="175">Спарсить матчи на Сегодня<LineBreak/>и выгрузить в Excel</TextBlock>
         </Button>
 
-        <Label Grid.Row="3" x:Name="labelStatus" Content="Статус: Не работает" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="125" Background="White"/>
+        <Label Grid.Row="3" x:Name="labelStatus" HorizontalContentAlignment="Center" 
+               Content="Статус: Не работает" 
+               HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10" 
+               Width="125" Background="White"/>
 
     </Grid>
 </Window>
