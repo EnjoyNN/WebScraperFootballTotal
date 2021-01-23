@@ -38,8 +38,15 @@
     <ApplicationIcon>Source\newico.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\WPFParserH2H\ParserH2H\bin\Debug\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="GetRequest">
+      <HintPath>..\..\WPFParserH2H\ParserH2H\bin\Debug\GetRequest.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,6 +65,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BackgroundWorkerClass.cs" />
+    <Compile Include="ExcelWork.cs" />
+    <Compile Include="GetMainUrls.cs" />
+    <Compile Include="MainUrl.cs" />
     <Compile Include="SearchSettings.xaml.cs">
       <DependentUpon>SearchSettings.xaml</DependentUpon>
     </Compile>
