@@ -67,8 +67,9 @@
     </ApplicationDefinition>
     <Compile Include="BackgroundWorkerClass.cs" />
     <Compile Include="ExcelWork.cs" />
+    <Compile Include="FormDataMatches.cs" />
     <Compile Include="GetMainUrls.cs" />
-    <Compile Include="MainUrl.cs" />
+    <Compile Include="DataContainerMatches.cs" />
     <Compile Include="SearchSettings.xaml.cs">
       <DependentUpon>SearchSettings.xaml</DependentUpon>
     </Compile>

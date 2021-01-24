@@ -34,8 +34,13 @@ namespace ParserFootballTotal
         public void Start(string whatIsDay, MainWindow mainWindow)
         {
             this.whatIsDay = whatIsDay;
-            backWorker.WorkerSupportsCancellation = true;
-            backWorker.WorkerReportsProgress = true;
+            this.mainWindow = mainWindow;
+
+            backWorker = new BackgroundWorker
+            {
+                WorkerSupportsCancellation = true,
+                WorkerReportsProgress = true
+            };
             backWorker.DoWork += backworker_DoWork;
             backWorker.ProgressChanged += backworker_ProgressChanged;
             backWorker.RunWorkerCompleted += backworker_RunWorkerCompleted;
@@ -86,13 +91,14 @@ namespace ParserFootballTotal
 
 
 
-                if (Settings.Default.settingAllMatchInAllTotalUnder05.)
+              // if (Settings.Default.settingAllMatchInAllTotalUnder05.)
 
 
+                var getMainUrls = new GetMainUrls();
+                getMainUrls.getFormDataMatches(mainWindow);
 
 
-
-                string allMatches = ExtractHTML.ExtractTag(Browser.Document, "table", "class=\"daymatches\"");
+              /*  string allMatches = ExtractHTML.ExtractTag(Browser.Document, "table", "class=\"daymatches\"");
 
                 List<string> allLeague = new List<string>();
                 allLeague.AddRange(ExtractHTML.ExtractTagsCollection(allMatches, "tbody"));
@@ -111,7 +117,7 @@ namespace ParserFootballTotal
 
                 package.Workbook.Worksheets.Delete(worksheetTemp);
 
-                backWorker.ReportProgress(100, fileName);
+                backWorker.ReportProgress(100, fileName);*/
             }
             catch(Exception ex)
             {
@@ -137,7 +143,5 @@ namespace ParserFootballTotal
                 //backworker.CancelAsync();
             }
         }
-
-        private List<>
     }
 }
