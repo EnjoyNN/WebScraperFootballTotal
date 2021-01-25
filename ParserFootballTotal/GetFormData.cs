@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -12,8 +13,13 @@ namespace ParserFootballTotal
 {
     class GetFormData
     {
-        private List<Thread> threads = new List<Thread>();
-        private static object lockFormData = new object();
+        //краткое описание работы класса
+        //одна открытая (public) функция - получение контейнеров класса FormDataMatches
+        //при запуске этой паблик функции она вызывает: функцию получения матчей по логике из страницы Серий сайта, и эта функцию так же вызывает функцию получения чекбоксов
+        //                                              функцию получения матчей по логике обе не забьют, то есть проходится по всем лигам в каждый конкретный день, так же вызывается функцию проверки своих чекбоксов
+        //затем результаты двух функций этих двух логик суммируются в один лист и выдаются.
+
+        //private static object lockFormData = new object();
 
         private List<DataContainer> getTotalsAndFailedCleanSheetsUrls(MainWindow mainWindow)
         {
@@ -362,7 +368,7 @@ namespace ParserFootballTotal
 
         private List<DataContainer> getBothFailedToScoreUrls(MainWindow mainWindow)
         {
-            var mainUrls = new List<DataContainer>();
+        var mainUrls = new List<DataContainer>();
 
             mainWindow.Dispatcher.Invoke(() =>
             {
@@ -429,12 +435,219 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
             });
-            return null;
+            return mainUrls;
+        }
+
+        private List<FormDataMatches> getFormDataMatchesBothFailedToScore(MainWindow mainWindow,
+            List<DateTime> currentDateTimes)
+        {
+        var formDataList = new List<FormDataMatches>();
+
+            //делаем еще один цикл for на каждый день(если не только сегодня, но еще завтра и послезавтра)
+            for (int day = 0; day < currentDateTimes.Count; day++)
+            {
+                List<Thread> threads = new List<Thread>();
+                object lockFormData = new object();
+
+                //потом это все нужно либо в другую функцию либо как то инкапсулировать попробовать 
+                GetRequestt browMain = new GetRequestt();
+                browMain.Get("https://24score.pro/?date=" + String.Format("{0:yyyy-MM-dd}", currentDateTimes[day]));
+
+                string tagDayMatches = ExtractHTML.ExtractTag(browMain.Document, "table", "class=\"daymatches\"");
+
+                List<string> allLeague = new List<string>();
+                allLeague.AddRange(ExtractHTML.ExtractTagsCollection(tagDayMatches, "tbody"));
+
+                //сначала проходимя по всем лигам в for i
+                //затем в for j парсим каждый матч в лиге, заносим эти данные в листы ниже, на каждую пару команд своя строка в каждом листе 
+                //далее в новом потоке открываем ссылку лиги, в for j проходимся по каждой нужной серии из чекбоксов отмеченных пользователем в мейн форме  
+                //в for k уже получив нужную форму проходимся по всем командам в таблице
+                //в for l проверяем не одна ли это из наших команд
+                for (int i = 0; i < allLeague.Count; i++)
+                {
+                    try
+                    {
+                        List<string> matchesInLeague = new List<string>();
+                        matchesInLeague.AddRange(ExtractHTML.ExtractTagsCollection(allLeague[i], "tr"));
+
+                        string nameLeague =
+                            ExtractHTML.ExtractTagInnerHTML(
+                                ExtractHTML.ExtractTagInnerHTML(matchesInLeague[0], "th"), "a");
+                        string urlLeague =
+                            ExtractHTML.ExtractAttributeValue(
+                                ExtractHTML.ExtractTagInnerHTML(matchesInLeague[0], "th"),
+                                "a href");
+
+                        var nameCommands1 = new List<string>();
+                        var nameCommands2 = new List<string>();
+                        var timeMatches = new List<string>();
+                        var dateMatches = new List<string>();
+
+                        //парсим от единицы потому что первый номер это хидер, а не пара матчей
+                        for (int j = 1; j < matchesInLeague.Count; j++)
+                        {
+                            if (ExtractHTML.ExtractAttributeValue(matchesInLeague[j], "class") == "even" ||
+                                ExtractHTML.ExtractAttributeValue(matchesInLeague[j], "class") == "odd")
+                            {
+                                nameCommands1.Add(ExtractHTML.ExtractTagInnerHTML(
+                                    ExtractHTML.ExtractTagInnerHTML(matchesInLeague[j], "td", "class=\"team tm1\""),
+                                    "a"));
+
+                                nameCommands2.Add(ExtractHTML.ExtractTagInnerHTML(
+                                    ExtractHTML.ExtractTagInnerHTML(matchesInLeague[j], "td", "class=\"team tm2\""),
+                                    "a"));
+
+                                string timeMatch = ExtractHTML
+                                    .ExtractTagInnerHTML(matchesInLeague[j], "td", "class=\"time\"").Trim();
+                                if (timeMatch.Contains("<span"))
+                                    timeMatch = ExtractHTML
+                                        .ExtractTagInnerHTML(matchesInLeague[j], "td", "class=\"time\"")
+                                        .Remove(
+                                            ExtractHTML.ExtractTagInnerHTML(matchesInLeague[j], "td",
+                                                    "class=\"time\"")
+                                                .IndexOf("<span")).Trim();
+                                timeMatches.Add(timeMatch);
+
+                                string currentDate = ExtractHTML.ExtractTagInnerHTML(browMain.Document, "div",
+                                    "class=\"current_date\"");
+                                currentDate = String.Format("{0:dd.MM.yyyy}",
+                                    DateTime.ParseExact(currentDate, "dd MMMM yyyy",
+                                        CultureInfo.CreateSpecificCulture("ru-RU")));
+                                dateMatches.Add(currentDate);
+                            }
+                        }
+
+                        //получаем контейнеры, котоыре отмечены чекбоксом, и получаим их номера в таблицах для дальнейшего парса
+                        var containersBothFailedToScore = new List<DataContainer>();
+                        containersBothFailedToScore = getBothFailedToScoreUrls(mainWindow);
+
+                        //делаем проверку на наличие standings в url, у лиг, вроде кубков, такого нет и они нам соответственно не нужны
+                        if (urlLeague.Contains("standings/"))
+                        {
+                            //поток скорее всего будет использовать разные данные, которые выше, их нужно будет передать в него сначала.
+                            Thread thread = new Thread(() =>
+                            {
+                                try
+                                {
+                                    var browser = new GetRequestt();
+
+                                    //так же здесь парсим ключ, так как нужна информация подгружается js скриптом
+                                    browser.Get("https://24score.pro" +
+                                                urlLeague.Replace("standings/", "both_teams_scored/"));
+                                    reconnectBrowser(browser, "https://24score.pro" +
+                                                              urlLeague.Replace("standings/", "both_teams_scored/"));
+                                    string key = browser.Document.Substring("data: {\"data_key\" : \"", "\"}");
+                                    browser.Get("https://24score.pro/backend/load_page_data.php?data_key=" + key);
+                                    reconnectBrowser(browser, "https://24score.pro/backend/load_page_data.php?data_key=" + key);
+
+                                    for (int j = 0; j < containersBothFailedToScore.Count; j++)
+                                    {
+                                        string divAllMatchOrHalf = ExtractHTML.ExtractTagInnerHTML(
+                                            ExtractHTML.ExtractTagsCollection(browser.Document, "div",
+                                                "class=\"data-tab data_times")[
+                                                containersBothFailedToScore[j].divAllMatchOrHalf], "div",
+                                            "class=\"data-tab");
+                                        string mainDiv =
+                                            ExtractHTML.ExtractTagsCollection(divAllMatchOrHalf, "div",
+                                                "class=\"data-tab")[
+                                                containersBothFailedToScore[j].divAllHomeAway];
+                                        string dataTable =
+                                            ExtractHTML.ExtractTagInnerHTML(mainDiv, "table",
+                                                "class=\"t4 evenodd sort\"");
+
+                                        lock (lockFormData)
+                                        {
+                                            var trMatches = new List<string>();
+                                            trMatches.AddRange(ExtractHTML.ExtractTagsCollection(dataTable, "tr"));
+
+                                            //от 1 и до -1, потому что первый и послудний элементы это хидер и футер
+                                            for (var k = 1; k < trMatches.Count - 1; k++)
+                                            {
+
+                                                var tdMatch = new List<string>();
+                                                tdMatch.AddRange(ExtractHTML.ExtractTagsCollection(trMatches[k], "td"));
+
+                                                string nameCommand =
+                                                    ExtractHTML.ExtractTagInnerHTML(tdMatch[0], "a").Trim();
+                                                string url = ExtractHTML.ExtractAttributeValue(tdMatch[0], "href");
+                                                string countSerie = ExtractHTML.ExtractTagInnerHTML(tdMatch[5], "td")
+                                                    .Trim();
+
+                                                //проверяем минусовая ли серия, и сравниваем подходит ли под количество серий
+                                                if ((Convert.ToInt32(countSerie) < 0) &&
+                                                    ((Convert.ToInt32(countSerie.Replace("-", "")) >=
+                                                      containersBothFailedToScore[j].countSerie)))
+                                                {
+                                                    //теперь проверяем одна ли это из наших команд или нет
+                                                    for (var l = 0; l < nameCommands1.Count; l++)
+                                                    {
+                                                        try
+                                                        {
+                                                            if (nameCommands1[l] == nameCommand)
+                                                            {
+                                                                var formMatch = new FormDataMatches(nameLeague,
+                                                                    nameCommands1[l] + " - " + nameCommands2[l],
+                                                                    timeMatches[l], dateMatches[l], nameCommands1[l],
+                                                                    containersBothFailedToScore[j].nameSerie,
+                                                                    Convert.ToInt32(countSerie), url);
+                                                                formDataList.Add(formMatch);
+                                                            }
+                                                            else if (nameCommands2[l] == nameCommand)
+                                                            {
+                                                                var formMatch = new FormDataMatches(nameLeague,
+                                                                    nameCommands1[l] + " - " + nameCommands2[l],
+                                                                    timeMatches[l], dateMatches[l], nameCommands2[l],
+                                                                    containersBothFailedToScore[j].nameSerie,
+                                                                    Convert.ToInt32(countSerie), url);
+                                                                formDataList.Add(formMatch);
+                                                            }
+                                                        }
+                                                        catch (Exception ex)
+                                                        {
+                                                            Console.WriteLine("Exception in search matches in " + ex);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    Console.WriteLine("Exception in thread, parsing DataContainer: " + ex);
+                                }
+
+                            });
+                            threads.Add(thread);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Exception with scrab leagues in man page: " + ex);
+                    }
+                }
+                foreach (var thread in threads) thread.Start();
+                foreach (var thread in threads) thread.Join();
+            }
+            return formDataList;
         }
 
 
-        public void getFormDataMatches(MainWindow mainWindow, List<DateTime> currentDateTimes)
+        public List<FormDataMatches> getFormDataMatches(MainWindow mainWindow, List<DateTime> currentDateTimes)
         {
+            var formDataList = new List<FormDataMatches>();
+
+            formDataList.AddRange(getFormDataMatchesTotalsAndFailedCleanSheets(mainWindow, currentDateTimes));
+            formDataList.AddRange(getFormDataMatchesBothFailedToScore(mainWindow, currentDateTimes));
+
+            return formDataList;
+        }
+
+        private List<FormDataMatches> getFormDataMatchesTotalsAndFailedCleanSheets(MainWindow mainWindow, List<DateTime> currentDateTimes)
+        {
+            List<Thread> threads = new List<Thread>();
+            object lockFormData = new object();
+
             var formDataList = new List<FormDataMatches>();
             var containersTotalsAndFailedCleanSheets = new List<DataContainer>();
             containersTotalsAndFailedCleanSheets = getTotalsAndFailedCleanSheetsUrls(mainWindow);
@@ -451,11 +664,13 @@ namespace ParserFootballTotal
                         var browser = new GetRequestt();
                         //возможно лочить придется с начала обращения к list mainUrl
                         browser.Get("https://24score.pro" + containersTotalsAndFailedCleanSheets[normali].url);
+                        reconnectBrowser(browser, "https://24score.pro" + containersTotalsAndFailedCleanSheets[normali].url);
 
                         //сервер дает инфу для js скрипта по гет запросу и ключу, который он сам генерит при обращении.
                         //поэтому просто подключаемся к странице забираем ключ и делаем запрос с ключом, получаем то, что нужно
                         string key = browser.Document.Substring("data: {\"data_key\" : \"", "\"}");
                         browser.Get("https://24score.pro/backend/load_page_data.php?data_key=" + key);
+                        reconnectBrowser(browser, "https://24score.pro/backend/load_page_data.php?data_key=" + key);
 
                         //получаем конкретный лист с матчами нужной серии
                         // string DataContainer = ExtractHTML.ExtractTag(browser.Document, "div", "id=\"data_container\"");
@@ -499,14 +714,16 @@ namespace ParserFootballTotal
                                 string countSerie = ExtractHTML.ExtractTagInnerHTML(tdMatch[3], "td").Trim();
 
                                 //делаем проверку на нужное количество серий и на ту ли дату следующий матч(сегодня или сегодня, завтра, послезавтра)
-                                if (Convert.ToInt32(countSerie) >= containersTotalsAndFailedCleanSheets[normali].countSerie)
+                                if (Convert.ToInt32(countSerie) >=
+                                    containersTotalsAndFailedCleanSheets[normali].countSerie)
                                 {
                                     foreach (var date in currentDateTimes)
                                     {
                                         if (date.Date == nextDateTime.Date)
                                         {
                                             var formMatch = new FormDataMatches(nameLeague, nextMatch, nextTime,
-                                                nextDate, nameCommand, containersTotalsAndFailedCleanSheets[normali].nameSerie,
+                                                nextDate, nameCommand,
+                                                containersTotalsAndFailedCleanSheets[normali].nameSerie,
                                                 Convert.ToInt32(countSerie), url);
                                             formDataList.Add(formMatch);
                                         }
@@ -523,151 +740,25 @@ namespace ParserFootballTotal
                 });
                 threads.Add(thread);
             }
-
             foreach (var thread in threads) thread.Start();
             foreach (var thread in threads) thread.Join();
 
+            return formDataList;
+        }
 
-            threads.Clear();
-            //потом это все нужно либо в другую функцию либо как то инкапсулировать попробовать 
-            GetRequestt browMain = new GetRequestt();
-            browMain.Get("https://24score.pro");
-
-            string tagDayMatches = ExtractHTML.ExtractTag(browMain.Document, "table", "class=\"daymatches\"");
-
-            List<string> allLeague = new List<string>();
-            allLeague.AddRange(ExtractHTML.ExtractTagsCollection(tagDayMatches, "tbody"));
-
-            for (int i = 0; i < allLeague.Count; i++)
+        //при большом количестве потоков браузер может не загружать некторые страницы, и нужно делать несколько (зачастую еще одну) попытку
+        private void reconnectBrowser(GetRequestt browser, string url)
+        {
+            int countConnect = 0;
+            while (browser.Document == "")
             {
-               // int normali = i;
-
-                try
+                if (countConnect == 10)
                 {
-                    List<string> matchesInLeague = new List<string>();
-                    matchesInLeague.AddRange(ExtractHTML.ExtractTagsCollection(allLeague[i], "tr"));
-
-                    string nameLeague =
-                        ExtractHTML.ExtractTagInnerHTML(
-                            ExtractHTML.ExtractTagInnerHTML(matchesInLeague[0], "th"), "a");
-                    string urlLeague =
-                        ExtractHTML.ExtractAttributeValue(
-                            ExtractHTML.ExtractTagInnerHTML(matchesInLeague[0], "th"),
-                            "a href");
-
-                    var nameCommands1 = new List<string>();
-                    var nameCommands2 = new List<string>();
-                    var timeMatches = new List<string>();
-                    var dateMatches = new List<string>();
-
-                    //парсим от единицы потому что первый номер это хидер, а не пара матчей
-                    for (int j = 1; j < matchesInLeague.Count; j++)
-                    {
-                        if (ExtractHTML.ExtractAttributeValue(matchesInLeague[j], "class") == "even" ||
-                            ExtractHTML.ExtractAttributeValue(matchesInLeague[j], "class") == "odd")
-                        {
-                            nameCommands1.Add(ExtractHTML.ExtractTagInnerHTML(
-                                ExtractHTML.ExtractTagInnerHTML(matchesInLeague[j], "td", "class=\"team tm1\""),
-                                "a"));
-
-                            nameCommands2.Add(ExtractHTML.ExtractTagInnerHTML(
-                                ExtractHTML.ExtractTagInnerHTML(matchesInLeague[j], "td", "class=\"team tm2\""),
-                                "a"));
-
-                            string timeMatch = ExtractHTML
-                                .ExtractTagInnerHTML(matchesInLeague[j], "td", "class=\"time\"").Trim();
-                            if (timeMatch.Contains("<span"))
-                                timeMatch = ExtractHTML
-                                    .ExtractTagInnerHTML(matchesInLeague[j], "td", "class=\"time\"")
-                                    .Remove(
-                                        ExtractHTML.ExtractTagInnerHTML(matchesInLeague[j], "td",
-                                                "class=\"time\"")
-                                            .IndexOf("<span")).Trim();
-                            timeMatches.Add(timeMatch);
-
-                            dateMatches.Add(ExtractHTML.ExtractTagInnerHTML(browMain.Document, "div",
-                                "class=\"current_date\""));
-                        }
-                    }
-
-                    //получаем контейнеры, котоыре отмечены чекбоксом, и получаим их номера в таблицах для дальнейшего парса
-                    var containersBothFailedToScore = new List<DataContainer>();
-                    containersBothFailedToScore = getBothFailedToScoreUrls(mainWindow);
-
-                    //поток скорее всего будет использовать разные данные, котоыре выше, их нужно будет передать в него сначала.
-                    Thread thread = new Thread(() =>
-                    {
-                        try
-                        {
-                            var browser = new GetRequestt();
-
-                            //так же здесь парсим ключ, так как нужна информация подгружается js скриптом
-                            browser.Get("https://24score.pro" + urlLeague.Replace("standings/", "both_teams_scored/"));
-                            string key = browser.Document.Substring("data: {\"data_key\" : \"", "\"}");
-                            browser.Get("https://24score.pro/backend/load_page_data.php?data_key=" + key);
-
-                            for (int j = 0; j < containersBothFailedToScore.Count; j++)
-                            {
-                                string divAllMatchOrHalf =
-                                    ExtractHTML.ExtractTagsCollection(browser.Document, "div",
-                                        "class=\"data-tab data-level1")[
-                                        containersBothFailedToScore[j].divAllMatchOrHalf];
-                                string mainDiv =
-                                    ExtractHTML.ExtractTagsCollection(divAllMatchOrHalf, "div",
-                                        "class=\"data-tab data-level2")[
-                                        containersBothFailedToScore[j].divAllHomeAway];
-                                string dataTable =
-                                    ExtractHTML.ExtractTagInnerHTML(mainDiv, "table", "class=\"datatable evenodd\"");
-
-                                lock (lockFormData)
-                                {
-                                    var trMatches = new List<string>();
-                                    trMatches.AddRange(ExtractHTML.ExtractTagsCollection(dataTable, "tr"));
-
-                                    for (var k = 1; k < trMatches.Count; k++)
-                                    {
-                                        var tdMatch = new List<string>();
-                                        tdMatch.AddRange(ExtractHTML.ExtractTagsCollection(trMatches[j], "td"));
-
-                                        string nameCommand = ExtractHTML.ExtractTagInnerHTML(tdMatch[0], "a").Trim();
-                                        string url = ExtractHTML.ExtractAttributeValue(tdMatch[0], "href");
-                                        string countSerie = ExtractHTML.ExtractTagInnerHTML(tdMatch[5], "td").Trim();
-
-                                        //проверяем на то сначал минусовая ли серия(как нам и нужно)
-                                        if (countSerie.Contains("-"))
-                                        {
-                                             //теперь убираем минус и сравниваем подходит ли под количество серий
-                                            if (Convert.ToInt32(countSerie.Replace("-", "")) >=
-                                                containersBothFailedToScore[j].countSerie)
-                                            {
-                                                var formMatch = new FormDataMatches(nameLeague, name, nextTime,
-                                                    nextDate, nameCommand, containersTotalsAndFailedCleanSheets[normali].nameSerie,
-                                                    Convert.ToInt32(countSerie), url);
-                                                formDataList.Add(formMatch);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("Exception in thread, parsing DataContainer: " + ex);
-                        }
-
-                    }); 
-                    threads.Add(thread);
+                    break;
                 }
-                catch (Exception ex)
-                {
-                    //можно было бы поставить защиту от того, что будет кубок либо еще что-то..
-                    //но я думаю он просто будет получать эксепшоны и кидать их сюда. мейби это тоже вариант хе-хе
-                    Console.WriteLine("Exception with scrab leagues in man page: " + ex);
-                }
+                browser.Get(url);
+                countConnect++;
             }
-
-            foreach (var thread in threads) thread.Start();
-            foreach (var thread in threads) thread.Join();
         }
     }
 }

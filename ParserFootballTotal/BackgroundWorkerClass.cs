@@ -88,35 +88,61 @@ namespace ParserFootballTotal
                 ExcelNamedStyleXml mainStyle = package.Workbook.Styles.CreateNamedStyle("mainStyle");
                 mainStyle = ExcelWork.getExcelStyle("Arial", 11, "", mainStyle);
 
-
-
-              // if (Settings.Default.settingAllMatchInAllTotalUnder05.)
-
-
+                //вызываем функцию парса матчей по двум логикам, и получаем лист с матчами
                 var getMainUrls = new GetFormData();
-                getMainUrls.getFormDataMatches(mainWindow, currentDateTimes);
+                var formDataList = new List<FormDataMatches>();
+                formDataList.AddRange(getMainUrls.getFormDataMatches(mainWindow, currentDateTimes));
+                int a = 5;
 
 
-              /*  string allMatches = ExtractHTML.ExtractTag(Browser.Document, "table", "class=\"daymatches\"");
+                //пока просто пробую парсить дату здесь, потом перенесу в другой класс либо функцию
 
-                List<string> allLeague = new List<string>();
-                allLeague.AddRange(ExtractHTML.ExtractTagsCollection(allMatches, "tbody"));
-
-                List<string> match = new List<string>();
-
-                //тут мы парсим лиги
-
-                for (int i = 0; i < allLeague.Count; i++)
+                var threads = new List<Thread>();
+                for (var i = 0; i < formDataList.Count; i++)
                 {
-                    ParsLeague(allLeague[i]);
+                    var thread = new Thread(() =>
+                    {
+
+
+
+                    });
+                    threads.Add(thread);
                 }
 
                 foreach (var thread in threads) thread.Start();
                 foreach (var thread in threads) thread.Join();
 
-                package.Workbook.Worksheets.Delete(worksheetTemp);
 
-                backWorker.ReportProgress(100, fileName);*/
+
+
+
+
+
+
+
+
+
+
+                /*  string allMatches = ExtractHTML.ExtractTag(Browser.Document, "table", "class=\"daymatches\"");
+  
+                  List<string> allLeague = new List<string>();
+                  allLeague.AddRange(ExtractHTML.ExtractTagsCollection(allMatches, "tbody"));
+  
+                  List<string> match = new List<string>();
+  
+                  //тут мы парсим лиги
+  
+                  for (int i = 0; i < allLeague.Count; i++)
+                  {
+                      ParsLeague(allLeague[i]);
+                  }
+  
+                  foreach (var thread in threads) thread.Start();
+                  foreach (var thread in threads) thread.Join();
+  
+                  package.Workbook.Worksheets.Delete(worksheetTemp);
+  
+                  backWorker.ReportProgress(100, fileName);*/
             }
             catch(Exception ex)
             {

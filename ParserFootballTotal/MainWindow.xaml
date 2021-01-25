@@ -51,118 +51,118 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <CheckBox Grid.Row="0" Grid.Column="0" x:Name="cbAllMatchInAllTotalUnder05" 
-                      Content="&lt; 0,5 Матч Всего" IsChecked="True"/>
+                      Content="&lt; 0,5 Матч Всего" IsChecked="False"/>
             <CheckBox Grid.Row="1" Grid.Column="0" x:Name="cbAllMatchInHomeTotalUnder05" 
-                      Content="&lt; 0,5 Матч Дома" IsChecked="True"/>
+                      Content="&lt; 0,5 Матч Дома" IsChecked="False"/>
             <CheckBox Grid.Row="2" Grid.Column="0" x:Name="cbAllMatchInAwayTotalUnder05" 
-                      Content="&lt; 0,5 Матч Гости" IsChecked="True"/>
+                      Content="&lt; 0,5 Матч Гости" IsChecked="False"/>
             <CheckBox Grid.Row="3" Grid.Column="0" x:Name="cbAllMatchInAllTotalUnder25"
-                      Content="&lt; 2,5 Матч Всего" IsChecked="True"/>
+                      Content="&lt; 2,5 Матч Всего" IsChecked="False"/>
             <CheckBox Grid.Row="4" Grid.Column="0" x:Name="cbAllMatchInHomeTotalUnder25" 
-                      Content="&lt; 2,5 Матч Дома" IsChecked="True"/>
+                      Content="&lt; 2,5 Матч Дома" IsChecked="False"/>
             <CheckBox Grid.Row="5" Grid.Column="0" x:Name="cbAllMatchInAwayTotalUnder25" 
-                      Content="&lt; 2,5 Матч Гости" IsChecked="True"/>
+                      Content="&lt; 2,5 Матч Гости" IsChecked="False"/>
             <CheckBox Grid.Row="6" Grid.Column="0" x:Name="cbAllMatchInAllFailedToScore" 
-                      Content="Не забив Матч Всего" IsChecked="True"/>
+                      Content="Не забив Матч Всего" IsChecked="False"/>
             <CheckBox Grid.Row="7" Grid.Column="0" x:Name="cbAllMatchInHomeFailedToScore"
-                      Content="Не забив Матч Дома" IsChecked="True"/>
+                      Content="Не забив Матч Дома" IsChecked="False"/>
             <CheckBox Grid.Row="8" Grid.Column="0" x:Name="cbAllMatchInAwayFailedToScore" 
-                      Content="Не забив Матч Гости" IsChecked="True"/>
+                      Content="Не забив Матч Гости" IsChecked="False"/>
 
             <CheckBox Grid.Row="0" Grid.Column="1" x:Name="cbFirstTimeInAllTotalUnder05" 
-                      Content="&lt; 0,5 1-й Тайм Всего" IsChecked="True"/>
+                      Content="&lt; 0,5 1-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="1" Grid.Column="1" x:Name="cbFirstTimeInHomeTotalUnder05" 
-                      Content="&lt; 0,5 1-й Тайм Дома" IsChecked="True"/>
+                      Content="&lt; 0,5 1-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="2" Grid.Column="1" x:Name="cbFirstTimeInAwayTotalUnder05" 
-                      Content="&lt; 0,5 1-й Тайм Гости" IsChecked="True"/>
+                      Content="&lt; 0,5 1-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="3" Grid.Column="1" x:Name="cbFirstTimeInAllTotalUnder25" 
-                      Content="&lt; 2,5 1-й Тайм Всего" IsChecked="True"/>
+                      Content="&lt; 2,5 1-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="4" Grid.Column="1" x:Name="cbFirstTimeInHomeTotalUnder25" 
-                      Content="&lt; 2,5 1-й Тайм Дома" IsChecked="True"/>
+                      Content="&lt; 2,5 1-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="5" Grid.Column="1" x:Name="cbFirstTimeInAwayTotalUnder25"
-                      Content="&lt; 2,5 1-й Тайм Гости" IsChecked="True"/>
+                      Content="&lt; 2,5 1-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="6" Grid.Column="1" x:Name="cbFirstTimeInAllFailedToScore" 
-                      Content="Не забив 1-й Тайм Всего" IsChecked="True"/>
+                      Content="Не забив 1-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="7" Grid.Column="1" x:Name="cbFirstTimeInHomeFailedToScore" 
-                      Content="Не забив 1-й Тайм Дома" IsChecked="True"/>
+                      Content="Не забив 1-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="8" Grid.Column="1" x:Name="cbFirstTimeInAwayFailedToScore" 
-                      Content="Не забив 1-й Тайм Гости" IsChecked="True"/>
+                      Content="Не забив 1-й Тайм Гости" IsChecked="False"/>
 
             <CheckBox Grid.Row="0" Grid.Column="2" x:Name="cbSecondTimeInAllTotalUnder05" 
-                      Content="&lt; 0,5 2-й Тайм Всего" IsChecked="True"/>
+                      Content="&lt; 0,5 2-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="1" Grid.Column="2" x:Name="cbSecondTimeInHomeTotalUnder05" 
-                      Content="&lt; 0,5 2-й Тайм Дома" IsChecked="True"/>
+                      Content="&lt; 0,5 2-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="2" Grid.Column="2" x:Name="cbSecondTimeInAwayTotalUnder05" 
-                      Content="&lt; 0,5 2-й Тайм Гости" IsChecked="True"/>
+                      Content="&lt; 0,5 2-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="3" Grid.Column="2" x:Name="cbSecondTimeInAllTotalUnder25"
-                      Content="&lt; 2,5 2-й Тайм Всего" IsChecked="True"/>
+                      Content="&lt; 2,5 2-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="4" Grid.Column="2" x:Name="cbSecondTimeInHomeTotalUnder25" 
-                      Content="&lt; 2,5 2-й Тайм Дома" IsChecked="True"/>
+                      Content="&lt; 2,5 2-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="5" Grid.Column="2" x:Name="cbSecondTimeInAwayTotalUnder25"
-                      Content="&lt; 2,5 2-й Тайм Гости" IsChecked="True"/>
+                      Content="&lt; 2,5 2-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="6" Grid.Column="2" x:Name="cbSecondTimeInAllFailedToScore"
-                      Content="Не забив 2-й Тайм Всего" IsChecked="True"/>
+                      Content="Не забив 2-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="7" Grid.Column="2" x:Name="cbSecondTimeInHomeFailedToScore"
-                      Content="Не забив 2-й Тайм Дома" IsChecked="True"/>
+                      Content="Не забив 2-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="8" Grid.Column="2" x:Name="cbSecondTimeInAwayFailedToScore" 
-                      Content="Не забив 2-й Тайм Гости" IsChecked="True"/>
+                      Content="Не забив 2-й Тайм Гости" IsChecked="False"/>
 
             <CheckBox Grid.Row="0" Grid.Column="3" x:Name="cbAllMatchInAllTotalUnder15" 
-                      Content="&lt; 1,5 Матч Всего" IsChecked="True"/>
+                      Content="&lt; 1,5 Матч Всего" IsChecked="False"/>
             <CheckBox Grid.Row="1" Grid.Column="3" x:Name="cbAllMatchInHomeTotalUnder15" 
-                      Content="&lt; 1,5 Матч Дома" IsChecked="True"/>
+                      Content="&lt; 1,5 Матч Дома" IsChecked="False"/>
             <CheckBox Grid.Row="2" Grid.Column="3" x:Name="cbAllMatchInAwayTotalUnder15" 
-                      Content="&lt; 1,5 Матч Гости" IsChecked="True"/>
+                      Content="&lt; 1,5 Матч Гости" IsChecked="False"/>
             <CheckBox Grid.Row="3" Grid.Column="3" x:Name="cbAllMatchInAllCleanSheets" 
-                      Content="Не проп Матч Всего" IsChecked="True"/>
+                      Content="Не проп Матч Всего" IsChecked="False"/>
             <CheckBox Grid.Row="4" Grid.Column="3" x:Name="cbAllMatchInHomeCleanSheets" 
-                      Content="Не проп Матч Дома" IsChecked="True"/>
+                      Content="Не проп Матч Дома" IsChecked="False"/>
             <CheckBox Grid.Row="5" Grid.Column="3" x:Name="cbAllMatchInAwayCleanSheets" 
-                      Content="Не проп Матч Гости" IsChecked="True"/>
+                      Content="Не проп Матч Гости" IsChecked="False"/>
             <CheckBox Grid.Row="6" Grid.Column="3" x:Name="cbAllMatchInAllBothFailedToScore" 
-                      Content="Не забивали Оба Матч" IsChecked="True"/>
+                      Content="Не забивали Оба Матч" IsChecked="False"/>
             <CheckBox Grid.Row="7" Grid.Column="3" x:Name="cbAllMatchInHomeBothFailedToScore" 
-                      Content="Не забивали Оба Дома" IsChecked="True"/>
+                      Content="Не забивали Оба Дома" IsChecked="False"/>
             <CheckBox Grid.Row="8" Grid.Column="3" x:Name="cbAllMatchInAwayBothFailedToScore" 
-                      Content="Не забивали Оба Гости" IsChecked="True"/>
+                      Content="Не забивали Оба Гости" IsChecked="False"/>
 
             <CheckBox Grid.Row="0" Grid.Column="4" x:Name="cbFirstTimeInAllTotalUnder15" 
-                      Content="&lt; 1,5 1-й Тайм Всего" IsChecked="True"/>
+                      Content="&lt; 1,5 1-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="1" Grid.Column="4" x:Name="cbFirstTimeInHomeTotalUnder15" 
-                      Content="&lt; 1,5 1-й Тайм Дома" IsChecked="True"/>
+                      Content="&lt; 1,5 1-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="2" Grid.Column="4" x:Name="cbFirstTimeInAwayTotalUnder15"
-                      Content="&lt; 1,5 1-й Тайм Гости" IsChecked="True"/>
+                      Content="&lt; 1,5 1-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="3" Grid.Column="4" x:Name="cbFirstTimeInAllCleanSheets" 
-                      Content="Не проп 1-й Тайм Всего" IsChecked="True"/>
+                      Content="Не проп 1-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="4" Grid.Column="4" x:Name="cbFirstTimeInHomeCleanSheets" 
-                      Content="Не проп 1-й Тайм Дома" IsChecked="True"/>
+                      Content="Не проп 1-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="5" Grid.Column="4" x:Name="cbFirstTimeInAwayCleanSheets"
-                      Content="Не проп 1-й Тайм Гости" IsChecked="True"/>
+                      Content="Не проп 1-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="6" Grid.Column="4" x:Name="cbFirstTimeInAllBothFailedToScore" 
-                      Content="Не забив Оба 1-й Тайм" IsChecked="True"/>
+                      Content="Не забив Оба 1-й Тайм" IsChecked="False"/>
             <CheckBox Grid.Row="7" Grid.Column="4" x:Name="cbFirstTimeInHomeBothFailedToScore" 
-                      Content="Не заб Оба 1-й Т Дома" IsChecked="True"/>
+                      Content="Не заб Оба 1-й Т Дома" IsChecked="False"/>
             <CheckBox Grid.Row="8" Grid.Column="4" x:Name="cbFirstTimeInAwayBothFailedToScore" 
-                      Content="Не заб Оба 1-й Т Гости" IsChecked="True"/>
+                      Content="Не заб Оба 1-й Т Гости" IsChecked="False"/>
 
             <CheckBox Grid.Row="0" Grid.Column="5" x:Name="cbSecondTimeInAllTotalUnder15" 
-                      Content="&lt; 1,5 2-й Тайм Всего" IsChecked="True"/>
+                      Content="&lt; 1,5 2-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="1" Grid.Column="5" x:Name="cbSecondTimeInHomeTotalUnder15" 
-                      Content="&lt; 1,5 2-й Тайм Дома" IsChecked="True"/>
+                      Content="&lt; 1,5 2-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="2" Grid.Column="5" x:Name="cbSecondTimeInAwayTotalUnder15" 
-                      Content="&lt; 1,5 2-й Тайм Гости" IsChecked="True"/>
+                      Content="&lt; 1,5 2-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="3" Grid.Column="5" x:Name="cbSecondTimeInAllCleanSheets"
-                      Content="Не проп 2-й Тайм Всего" IsChecked="True"/>
+                      Content="Не проп 2-й Тайм Всего" IsChecked="False"/>
             <CheckBox Grid.Row="4" Grid.Column="5" x:Name="cbSecondTimeInHomeCleanSheets" 
-                      Content="Не проп 2-й Тайм Дома" IsChecked="True"/>
+                      Content="Не проп 2-й Тайм Дома" IsChecked="False"/>
             <CheckBox Grid.Row="5" Grid.Column="5" x:Name="cbSecondTimeInAwayCleanSheets"
-                      Content="Не проп 2-й Тайм Гости" IsChecked="True"/>
+                      Content="Не проп 2-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="6" Grid.Column="5" x:Name="cbSecondTimeInAllBothFailedToScore" 
-                      Content="Не забив Оба 2-й Тайм" IsChecked="True"/>
+                      Content="Не забив Оба 2-й Тайм" IsChecked="False"/>
             <CheckBox Grid.Row="7" Grid.Column="5" x:Name="cbSecondTimeInHomeBothFailedToScore" 
-                      Content="Не заб Оба 2-й Т Дома" IsChecked="True"/>
+                      Content="Не заб Оба 2-й Т Дома" IsChecked="False"/>
             <CheckBox Grid.Row="8" Grid.Column="5" x:Name="cbSecondTimeInAwayBothFailedToScore" 
-                      Content="Не заб Оба 2-й Т Гости" IsChecked="True"/>
+                      Content="Не заб Оба 2-й Т Гости" IsChecked="False"/>
 
         </Grid>
 
