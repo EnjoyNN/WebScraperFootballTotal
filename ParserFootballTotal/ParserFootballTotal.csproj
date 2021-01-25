@@ -68,8 +68,8 @@
     <Compile Include="BackgroundWorkerClass.cs" />
     <Compile Include="ExcelWork.cs" />
     <Compile Include="FormDataMatches.cs" />
-    <Compile Include="GetMainUrls.cs" />
-    <Compile Include="DataContainerMatches.cs" />
+    <Compile Include="GetFormData.cs" />
+    <Compile Include="DataContainer.cs" />
     <Compile Include="SearchSettings.xaml.cs">
       <DependentUpon>SearchSettings.xaml</DependentUpon>
     </Compile>
@@ -142,5 +142,6 @@
   <ItemGroup>
     <Resource Include="Source\newico.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

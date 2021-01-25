@@ -283,7 +283,7 @@
 
         <Button Grid.Row="3" x:Name="buttonStartThreeDays" HorizontalAlignment="Right" 
                 Margin="0,0,10,55" Width="210" Height="40" BorderBrush="Black" 
-                Background="White">
+                Background="White" Click="buttonStartThreeDays_Click">
             <TextBlock TextAlignment="Center" Width="210">Спарсить матчи на Сегодня, Завтра,<LineBreak/>Послезавтра и выгрузить в Excel</TextBlock>
         </Button>
 

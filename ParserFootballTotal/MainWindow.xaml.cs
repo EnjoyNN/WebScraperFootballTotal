@@ -46,5 +46,10 @@ namespace ParserFootballTotal
         {
             backWorker.Start("today", this);
         }
+
+        private void buttonStartThreeDays_Click(object sender, RoutedEventArgs e)
+        {
+            backWorker.Start("today, tomorrow, day_after_tomorrow", this);
+        }
     }
 }

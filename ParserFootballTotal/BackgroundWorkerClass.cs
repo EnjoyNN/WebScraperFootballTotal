@@ -65,19 +65,18 @@ namespace ParserFootballTotal
                 todayDate = DateTime.ParseExact(currentDate, "dd MMMM yyyy",
                     CultureInfo.CreateSpecificCulture("ru-RU"));
 
-                if (whatIsDay == "today") { }
-                    //nothing, we already in needed page
-                    //Browser.Get("https://24score.pro/?date=" + String.Format("{0:yyyy-MM-dd}", todayDate));
-                else if (whatIsDay == "today, tomorrow, day after tomorrow")
+                var currentDateTimes = new List<DateTime>();
+                if (whatIsDay == "today")
+                    currentDateTimes.Add(todayDate);
+                else if (whatIsDay == "today, tomorrow, day_after_tomorrow")
                 {
-                    //здесь нужно будет три запуска делать
-                    //todayDate = todayDate.AddDays(1);
-                    //Browser.Get("https://24score.pro/?date=" + String.Format("{0:yyyy-MM-dd}", todayDate));
+                    currentDateTimes.Add(todayDate);
+                    currentDateTimes.Add(todayDate.AddDays(1));
+                    currentDateTimes.Add(todayDate.AddDays(2));
                 }
 
-
                 DateTime dateTime = DateTime.Now;
-                string fileName = "Выгрузка на " + whatIsDay + " " + String.Format("{0:dd.MM.yyyy HH-mm-ss}", dateTime) +
+                string fileName = "Выгрузка PFT на " + whatIsDay + " " + String.Format("{0:dd.MM.yyyy HH-mm-ss}", dateTime) +
                                   ".xlsx";
                 File.Copy("Шаблон_ParserTotal.xlsx", fileName);
 
@@ -94,8 +93,8 @@ namespace ParserFootballTotal
               // if (Settings.Default.settingAllMatchInAllTotalUnder05.)
 
 
-                var getMainUrls = new GetMainUrls();
-                getMainUrls.getFormDataMatches(mainWindow);
+                var getMainUrls = new GetFormData();
+                getMainUrls.getFormDataMatches(mainWindow, currentDateTimes);
 
 
               /*  string allMatches = ExtractHTML.ExtractTag(Browser.Document, "table", "class=\"daymatches\"");
