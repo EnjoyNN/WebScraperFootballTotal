@@ -120,7 +120,7 @@
             <CheckBox Grid.Row="5" Grid.Column="3" x:Name="cbAllMatchInAwayCleanSheets" 
                       Content="Не проп Матч Гости" IsChecked="False"/>
             <CheckBox Grid.Row="6" Grid.Column="3" x:Name="cbAllMatchInAllBothFailedToScore" 
-                      Content="Не забивали Оба Матч" IsChecked="False"/>
+                      Content="Не забивали Оба Всего" IsChecked="False"/>
             <CheckBox Grid.Row="7" Grid.Column="3" x:Name="cbAllMatchInHomeBothFailedToScore" 
                       Content="Не забивали Оба Дома" IsChecked="False"/>
             <CheckBox Grid.Row="8" Grid.Column="3" x:Name="cbAllMatchInAwayBothFailedToScore" 
@@ -139,7 +139,7 @@
             <CheckBox Grid.Row="5" Grid.Column="4" x:Name="cbFirstTimeInAwayCleanSheets"
                       Content="Не проп 1-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="6" Grid.Column="4" x:Name="cbFirstTimeInAllBothFailedToScore" 
-                      Content="Не забив Оба 1-й Тайм" IsChecked="False"/>
+                      Content="Не заб Оба 1-й Т Всего" IsChecked="False"/>
             <CheckBox Grid.Row="7" Grid.Column="4" x:Name="cbFirstTimeInHomeBothFailedToScore" 
                       Content="Не заб Оба 1-й Т Дома" IsChecked="False"/>
             <CheckBox Grid.Row="8" Grid.Column="4" x:Name="cbFirstTimeInAwayBothFailedToScore" 
@@ -158,7 +158,7 @@
             <CheckBox Grid.Row="5" Grid.Column="5" x:Name="cbSecondTimeInAwayCleanSheets"
                       Content="Не проп 2-й Тайм Гости" IsChecked="False"/>
             <CheckBox Grid.Row="6" Grid.Column="5" x:Name="cbSecondTimeInAllBothFailedToScore" 
-                      Content="Не забив Оба 2-й Тайм" IsChecked="False"/>
+                      Content="Не заб Оба 2-й Т Всего" IsChecked="False"/>
             <CheckBox Grid.Row="7" Grid.Column="5" x:Name="cbSecondTimeInHomeBothFailedToScore" 
                       Content="Не заб Оба 2-й Т Дома" IsChecked="False"/>
             <CheckBox Grid.Row="8" Grid.Column="5" x:Name="cbSecondTimeInAwayBothFailedToScore" 

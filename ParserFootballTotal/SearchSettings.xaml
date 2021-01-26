@@ -242,7 +242,7 @@
                          Name="tbAllMatchInAwayCleanSheets" Margin="5,5,0,5" Width="25" />
             </StackPanel>
             <StackPanel Grid.Row="6" Grid.Column="3" Orientation="Horizontal">
-                <Label Name="lbAllMatchInAllBothFailedToScore">Не забивали Оба Матч</Label>
+                <Label Name="lbAllMatchInAllBothFailedToScore">Не забивали Оба Всего</Label>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
                          Name="tbAllMatchInAllBothFailedToScore" Margin="5,5,0,5" Width="25" />
@@ -297,7 +297,7 @@
                          Name="tbFirstTimeInAwayCleanSheets" Margin="5,5,0,5" Width="25" />
             </StackPanel>
             <StackPanel Grid.Row="6" Grid.Column="4" Orientation="Horizontal">
-                <Label Name="lbFirstTimeInAllBothFailedToScore">Не забив Оба 1-й Тайм</Label>
+                <Label Name="lbFirstTimeInAllBothFailedToScore">Не заб Оба 1-й Т Всего</Label>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
                          Name="tbFirstTimeInAllBothFailedToScore" Margin="5,5,0,5" Width="25" />
@@ -352,7 +352,7 @@
                          Name="tbSecondTimeInAwayCleanSheets" Margin="5,5,0,5" Width="25" />
             </StackPanel>
             <StackPanel Grid.Row="6" Grid.Column="5" Orientation="Horizontal">
-                <Label Name="lbSecondTimeInAllBothFailedToScore">Не забив Оба 2-й Тайм</Label>
+                <Label Name="lbSecondTimeInAllBothFailedToScore">Не заб Оба 2-й Т Всего</Label>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
                          Name="tbSecondTimeInAllBothFailedToScore" Margin="5,5,0,5" Width="25" />

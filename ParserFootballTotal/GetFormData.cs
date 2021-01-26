@@ -374,7 +374,7 @@ namespace ParserFootballTotal
             {
                 if (mainWindow.cbAllMatchInAllBothFailedToScore.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("Не забивали Оба Матч",
+                    var mainUrl = new DataContainer("Не забивали Оба Всего",
                         Settings.Default.settingAllMatchInAllBothFailedToScore, 0, 0);
                     mainUrls.Add(mainUrl);
                 }
@@ -395,7 +395,7 @@ namespace ParserFootballTotal
 
                 if (mainWindow.cbFirstTimeInAllBothFailedToScore.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("Не забив Оба 1-й Тайм",
+                    var mainUrl = new DataContainer("Не заб Оба 1-й Т Всего",
                         Settings.Default.settingFirstTimeInAllBothFailedToScore, 1, 0);
                     mainUrls.Add(mainUrl);
                 }
@@ -416,7 +416,7 @@ namespace ParserFootballTotal
 
                 if (mainWindow.cbSecondTimeInAllBothFailedToScore.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("Не забив Оба 2-й Тайм",
+                    var mainUrl = new DataContainer("Не заб Оба 2-й Т Всего",
                         Settings.Default.settingSecondTimeInAllBothFailedToScore, 2, 0);
                     mainUrls.Add(mainUrl);
                 }
@@ -589,7 +589,7 @@ namespace ParserFootballTotal
                                                                     nameCommands1[l] + " - " + nameCommands2[l],
                                                                     timeMatches[l], dateMatches[l], nameCommands1[l],
                                                                     containersBothFailedToScore[j].nameSerie,
-                                                                    Convert.ToInt32(countSerie), url);
+                                                                    Convert.ToInt32(countSerie.Replace("-", "")), url);
                                                                 formDataList.Add(formMatch);
                                                             }
                                                             else if (nameCommands2[l] == nameCommand)
@@ -598,7 +598,7 @@ namespace ParserFootballTotal
                                                                     nameCommands1[l] + " - " + nameCommands2[l],
                                                                     timeMatches[l], dateMatches[l], nameCommands2[l],
                                                                     containersBothFailedToScore[j].nameSerie,
-                                                                    Convert.ToInt32(countSerie), url);
+                                                                    Convert.ToInt32(countSerie.Replace("-", "")), url);
                                                                 formDataList.Add(formMatch);
                                                             }
                                                         }
