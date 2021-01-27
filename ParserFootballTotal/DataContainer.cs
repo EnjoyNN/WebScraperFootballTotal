@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
-
-namespace ParserFootballTotal
+﻿namespace ParserFootballTotal
 { 
     //этот класс служит для получения дата контейнеров сайта для дальнейшего парсинга этого в формдату
 class DataContainer

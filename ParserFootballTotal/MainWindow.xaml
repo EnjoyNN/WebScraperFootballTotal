@@ -272,7 +272,7 @@
         <CheckBox x:Name="checkBox_Copy52" Content="Не забивали Дома Оба""/>
         <CheckBox x:Name="checkBox_Copy53" Content="Не забивали Дома Оба""/>-->
 
-        <ProgressBar Grid.Row="3" x:Name="progrssBarMain" Height="25" Margin="10,45,10,10"  
+        <ProgressBar Grid.Row="3" x:Name="progressBarMain" Height="25" Margin="10,45,10,10"  
                      Foreground="#FF63C8F1"/>
 
         <Button Grid.Row="3" x:Name="buttonSearchSettings" Margin="10,0,0,55" 
