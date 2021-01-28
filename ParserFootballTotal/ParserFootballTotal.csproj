@@ -73,6 +73,7 @@
     <Compile Include="SearchSettings.xaml.cs">
       <DependentUpon>SearchSettings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="XmlSettings.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

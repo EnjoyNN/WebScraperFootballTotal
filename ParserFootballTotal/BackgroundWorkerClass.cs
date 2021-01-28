@@ -24,7 +24,7 @@ namespace ParserFootballTotal
         private ExcelPackage package;
         private ExcelWorksheet worksheet1, worksheet2, worksheetTemp;
         private static object locker = new object();
-        private static object locker2 = new object();
+        private int numberInRowSecondListExcel = 2;
         //переменная для каждой строчки каждого потока не нужна здесь, все будет грузится в один конгломерат, и только потом уже сортироваться по надобности.
 
         public void Start(string whatIsDay, MainWindow mainWindow)
@@ -32,19 +32,20 @@ namespace ParserFootballTotal
             this.whatIsDay = whatIsDay;
             this.mainWindow = mainWindow;
 
-            backWorker = new BackgroundWorker
-            {
-                WorkerSupportsCancellation = true,
-                WorkerReportsProgress = true
-            };
-            backWorker.DoWork += backworker_DoWork;
-            backWorker.ProgressChanged += backworker_ProgressChanged;
-            backWorker.RunWorkerCompleted += backworker_RunWorkerCompleted;
+
+
+            backWorker = new BackgroundWorker();
+            backWorker.WorkerSupportsCancellation = true;
+            backWorker.WorkerReportsProgress = true;
+            backWorker.DoWork += backWorker_DoWork;
+            backWorker.ProgressChanged += backWorker_ProgressChanged;
+            backWorker.RunWorkerCompleted += backWorker_RunWorkerCompleted;
+
 
             backWorker.RunWorkerAsync();
         }
 
-        private void backworker_DoWork(object sender, DoWorkEventArgs e)
+        private void backWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             Browser = new GetRequestt();
 
@@ -87,8 +88,8 @@ namespace ParserFootballTotal
                 var scores = new List<string>();
                 var redGreenBlue = new List<string>();
 
-                //счетчик на количество строк excel. равен тому от какого числа выполняется цикл
-                int numberInRow = 0;
+                //счетчик на количество строк excel. равен тому от какого числа выполняется цикл, с единицы, т.к. первая строка хидер в экселе
+                int numberInRow = 2;
                 //счетчик для progressbar'а. просто i использовать не получится, потому что потоки выполняются параллельно и i может прыгать. единица потому что первая строка экселя хидер заказчика
                 int endThread = 1;
 
@@ -193,28 +194,29 @@ namespace ParserFootballTotal
                                         redGreenBlue.Add(redGreenBlue1);
 
                                         //выгружаем в excel (потом это можно выкинуть в отдельную функцию)
-                                        worksheet1.Cells[numberInRow + 1, 1].Value = formDataList[normali].nameLeague;
-                                        worksheet1.Cells[numberInRow + 1, 2].Value =
+                                        worksheet1.Cells[numberInRow, 1].Value = formDataList[normali].nameLeague;
+                                        worksheet1.Cells[numberInRow, 2].Value =
                                             formDataList[normali].nextTime + " " + formDataList[normali].nextDate +
                                             " " + formDataList[normali].nextMatch;
-                                        worksheet1.Cells[numberInRow + 1, 3].Value = formDataList[normali].nameCommand;
-                                        worksheet1.Cells[numberInRow + 1, 4].Value = formDataList[normali].nameSerie;
-                                        worksheet1.Cells[numberInRow + 1, 5].Value = formDataList[normali].countSerie;
+                                        worksheet1.Cells[numberInRow, 3].Value = formDataList[normali].nameCommand;
+                                        worksheet1.Cells[numberInRow, 4].Value = formDataList[normali].nameSerie;
+                                        worksheet1.Cells[numberInRow, 5].Value = formDataList[normali].countSerie;
 
-                                        worksheet1.Cells[numberInRow + 1, j + 6].Value =
+                                        worksheet1.Cells[numberInRow, j + 6].Value =
                                             mainScore + "(" + firstTimeScore + ")";
                                         if (redGreenBlue1 == "В")
-                                            worksheet1.Cells[numberInRow + 1, j + 6].Style.Font.Color
+                                            worksheet1.Cells[numberInRow, j + 6].Style.Font.Color
                                                 .SetColor(Color.Green);
                                         else if (redGreenBlue1 == "П")
-                                            worksheet1.Cells[numberInRow + 1, j + 6].Style.Font.Color
+                                            worksheet1.Cells[numberInRow, j + 6].Style.Font.Color
                                                 .SetColor(Color.Red);
                                         else if (redGreenBlue1 == "Н")
-                                            worksheet1.Cells[numberInRow + 1, j + 6].Style.Font.Color
+                                            worksheet1.Cells[numberInRow, j + 6].Style.Font.Color
                                                 .SetColor(Color.Blue);
                                     
                                 }
-                                //возможно лочить тем же локером не получится, но попробую
+                                    //функция для отметки желтым и выгрузки на второй лист этого добра
+                                    yellowFill(numberInRow, countSerie);
 
                                     numberInRow++;
                                 }
@@ -232,43 +234,8 @@ namespace ParserFootballTotal
                 foreach (var thread in threads) thread.Start();
                 foreach (var thread in threads) thread.Join();
 
+                backWorker.ReportProgress(100);
 
-
-                package.Save();
-                backWorker.ReportProgress(100, "gggg");
-
-                int a = 0;
-
-
-
-
-
-
-                //потоки нужно раскладывать по пулам, чтобы запускалось не больше150 потоков, и пока те не отработают, чтобы новые не начинались.
-                //иначе начинаются жуткие просадки работы потоков
-
-
-
-                /*  string allMatches = ExtractHTML.ExtractTag(Browser.Document, "table", "class=\"daymatches\"");
-  
-                  List<string> allLeague = new List<string>();
-                  allLeague.AddRange(ExtractHTML.ExtractTagsCollection(allMatches, "tbody"));
-  
-                  List<string> match = new List<string>();
-  
-                  //тут мы парсим лиги
-  
-                  for (int i = 0; i < allLeague.Count; i++)
-                  {
-                      ParsLeague(allLeague[i]);
-                  }
-  
-                  foreach (var thread in threads) thread.Start();
-                  foreach (var thread in threads) thread.Join();
-  
-                  package.Workbook.Worksheets.Delete(worksheetTemp);
-  
-                  backWorker.ReportProgress(100, fileName);*/
             }
             catch(Exception ex)
             {
@@ -291,7 +258,55 @@ namespace ParserFootballTotal
             }
         }
 
-         void backworker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        //проходится от начала по всем счетам и заливает 0-0 желтым. если какой-то счет находит другой выходит из цикла
+        //так же выгружает сразу во второй лист серию
+        private void yellowFill(int numberInRow, int countColumns)
+        {
+            bool isFind = false;
+            for (int i = 0; i < countColumns; i++)
+            {
+                string firstTimeScore = worksheet1.Cells[numberInRow, i + 6].Value.ToString()
+                    .Substring("(", ")");
+                if (firstTimeScore == "0:0")
+                {
+                    //работает так, что елси находит первую колонку 0-0, помечает isFind, находит вторую, то только тогда уже 
+                    if (i == 0)
+                        isFind = true;
+                    else
+                    {
+                        worksheet1.Cells[numberInRow, i + 6].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                        worksheet1.Cells[numberInRow, i + 6].Style.Fill.BackgroundColor
+                            .SetColor(ColorTranslator.FromHtml("#FFFF00"));
+
+                        worksheet1.Cells[numberInRow, i + 5].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                        worksheet1.Cells[numberInRow, i + 5].Style.Fill.BackgroundColor
+                            .SetColor(ColorTranslator.FromHtml("#FFFF00"));
+                    }
+
+                    //делаем проверку на то, если последний элемент помечен желтым, то else не выполнится, но нам нужно выгрузить, поэтмоу выгружаем здесь
+                    //так же проверяем на то, не является ли просто массив счетов одним счетом нулевым, тогда нам его один не нужно помечать и выгружать во второй лист
+                    if ((i + 1) == countColumns && i != 0)
+                    {
+                        worksheet1.Cells[numberInRow, 1, numberInRow, i + 6].Copy(worksheet2.Cells[numberInRowSecondListExcel, 1]);
+                        numberInRowSecondListExcel++;
+                    }
+                }
+
+                else
+                {
+                    //i здесь не равно единице потому что если true и i=1 значит она нашел только первую колонку 0-0, а вторая не равна 0-0. поэтому такое не заливается и не копируется на второй лист 
+                    if (isFind == true && i != 1)
+                    {
+                        worksheet1.Cells[numberInRow, 1, numberInRow, i + 5].Copy(worksheet2.Cells[numberInRowSecondListExcel, 1]); 
+                        numberInRowSecondListExcel++;
+                    }
+                    break;
+                }
+
+            }
+        }
+
+         private void backWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             if (e.ProgressPercentage == 0)
             {
@@ -302,21 +317,15 @@ namespace ParserFootballTotal
                         e.UserState.ToString().IndexOf(" ")));
                 });
             }
-
-            if (e.ProgressPercentage == 100)
-            {
-                // mainWindow.CompletedWork();
-
-                //save может тормозить работу
-                package.Save();
-                MessageBox.Show("Выгрузка успешно завершена!");
-                backWorker.CancelAsync();
-            }
         }
 
-        void backworker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void backWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            // mainWindow.CompletedWork();
 
-        }
+            //save может тормозить работу
+            package.Save();
+            MessageBox.Show("Выгрузка успешно завершена!");
+            }
     }
 }

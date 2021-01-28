@@ -30,8 +30,6 @@ namespace ParserFootballTotal
             return style;
         }
 
-
-
         //in future, need to add a func deleteemptyrows for sort, and sort itself
     }
 }
