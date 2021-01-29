@@ -24,6 +24,25 @@ namespace ParserFootballTotal
             }
         }
 
+        public void CompletedWork()
+        {
+            labelStatus.Content = "Статус: Не работает";
+            buttonSearchSettings.IsEnabled = true;
+            buttonStartThreeDays.IsEnabled = true;
+            buttonStartToday.IsEnabled = true;
+            gridCheckBoxes.IsEnabled = true;
+            progressBarMain.Value = 0;
+        }
+
+        private void DisableFormAndRefreshVariables()
+        {
+            labelStatus.Content = "Статус: Поиск матчей";
+            buttonSearchSettings.IsEnabled = false;
+            buttonStartThreeDays.IsEnabled = false;
+            buttonStartToday.IsEnabled = false;
+            gridCheckBoxes.IsEnabled = false;
+        }
+
         private void buttonMin_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
@@ -44,6 +63,7 @@ namespace ParserFootballTotal
 
         private void buttonStartToday_Click(object sender, RoutedEventArgs e)
         {
+            DisableFormAndRefreshVariables();
             backWorker.Start("сегодня", this);
         }
 

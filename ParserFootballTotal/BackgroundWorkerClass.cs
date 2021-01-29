@@ -234,6 +234,10 @@ namespace ParserFootballTotal
                 foreach (var thread in threads) thread.Start();
                 foreach (var thread in threads) thread.Join();
 
+                sortWorksheetToDate(worksheet1);
+                sortWorksheetToDate(worksheet2);
+                package.Workbook.Worksheets.Delete(worksheetTemp);
+
                 backWorker.ReportProgress(100);
 
             }
@@ -305,8 +309,72 @@ namespace ParserFootballTotal
 
             }
         }
+        private void DeleteEmptyRows(ExcelWorksheet worksheet)
+        {
+            for (int i = worksheet.Dimension.End.Row; i > 0; i--)
+            {
+                if (worksheet.Cells[i, 1].Value == null)
+                    worksheet.DeleteRow(i);
+                else
+                    break;
+            }
 
-         private void backWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+            //удаляем пустые строки, они просто почему-то есть в некоторые дни. их пара штук
+            for (int i = 1; i < worksheet.Dimension.End.Row + 1; i++)
+            {
+                if ((worksheet.Cells[i, 1].Value == null) &&
+                    (worksheet.Cells[i, 2].Value == null) &&
+                    (worksheet.Cells[i, 3].Value == null) &&
+                    (worksheet.Cells[i, 4].Value == null))
+                {
+                    worksheet.DeleteRow(i);
+                    i--;
+                }
+            }
+        }
+
+        private void sortWorksheetToDate(ExcelWorksheet worksheet)
+        {
+            DeleteEmptyRows(worksheet);
+
+            worksheet.Cells[1, 1, worksheet.Dimension.End.Row, worksheet.Dimension.End.Column].Copy(worksheetTemp.Cells[1, 1]);
+            worksheet.Cells[2, 1, worksheet.Dimension.End.Row, worksheet.Dimension.End.Column].Clear();
+
+            //создаем лист со всеми строками(либо кластерами строк, как в третьем листе), и заполняем его этими кластерами\строками в цикле
+            List<ExcelRange> rangeList = new List<ExcelRange>();
+            for (int i = 2; i < worksheetTemp.Dimension.End.Row + 1; i++)
+            {
+                rangeList.Add(worksheetTemp.Cells[i, 1, i, worksheetTemp.Dimension.End.Column]);
+                }
+
+            //делаем пузырьковую сортировку листа по времени матча
+            for (int p = 0; p < rangeList.Count - 1; p++)
+            {
+                for (int t = 0; t < rangeList.Count - p - 1; t++)
+                {
+                    DateTime t1 = DateTime.ParseExact(worksheetTemp.Cells[rangeList[t].Start.Row, 2].Value.ToString().Substring(0, 16), "HH:mm dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                    DateTime t2 = DateTime.ParseExact(worksheetTemp.Cells[rangeList[t + 1].Start.Row, 2].Value.ToString().Substring(0, 16), "HH:mm dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                    if (t1 > t2)
+                    {
+                        ExcelRange temp = rangeList[t];
+                        rangeList.RemoveAt(t);
+                        rangeList.Insert(t + 1, temp);
+                    }
+                }
+            }
+
+            for (int i = 0; i < rangeList.Count; i++)
+            {
+                ExcelRange cell = rangeList[i];
+                cell.Copy(worksheet.Cells[i + 2, 1]);
+
+            }
+
+            worksheetTemp.Cells[4, 1, worksheetTemp.Dimension.End.Row, worksheetTemp.Dimension.End.Column].Clear();
+        }
+
+
+        private void backWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             if (e.ProgressPercentage == 0)
             {
@@ -321,10 +389,12 @@ namespace ParserFootballTotal
 
         private void backWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            // mainWindow.CompletedWork();
 
+            //супер долгая сортировка по 5000 элементов в массиве,примерно 20 секунд, но пока пускай так
             //save может тормозить работу
+
             package.Save();
+            mainWindow.CompletedWork();
             MessageBox.Show("Выгрузка успешно завершена!");
             }
     }
