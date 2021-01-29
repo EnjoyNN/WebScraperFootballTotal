@@ -163,7 +163,7 @@ namespace ParserFootballTotal
             saveFileDialog.InitialDirectory = Environment.CurrentDirectory + @"\Settings";
             saveFileDialog.ShowDialog();
 
-            if (File.Exists(saveFileDialog.FileName))
+            if (saveFileDialog.FileName != "")
             {
                 XmlSerializer serXml = new XmlSerializer(typeof(XmlSettings));
                 TextWriter writer = new StreamWriter(saveFileDialog.FileName);

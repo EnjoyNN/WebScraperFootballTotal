@@ -26,42 +26,42 @@ namespace ParserFootballTotal
 
                 if (mainWindow.cbAllMatchInAllTotalUnder05.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 0,5 Матч Всего", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 0,5 Матч Всего", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAllTotalUnder05, 0, 0, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbAllMatchInHomeTotalUnder05.IsChecked == true)
                 { 
-                    var mainUrl = new DataContainer("&lt; 0,5 Матч Дома", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 0,5 Матч Дома", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInHomeTotalUnder05, 0, 1, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbAllMatchInAwayTotalUnder05.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 0,5 Матч Гости", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 0,5 Матч Гости", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAwayTotalUnder05, 0, 2, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbAllMatchInAllTotalUnder25.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 2,5 Матч Всего", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 2,5 Матч Всего", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAllTotalUnder25, 0, 0, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbAllMatchInHomeTotalUnder25.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 2,5 Матч Дома", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 2,5 Матч Дома", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInHomeTotalUnder25, 0, 1, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbAllMatchInAwayTotalUnder25.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 2,5 Матч Гости", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 2,5 Матч Гости", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAwayTotalUnder25, 0, 2, 2);
                     mainUrls.Add(mainUrl);
                 }
@@ -92,42 +92,42 @@ namespace ParserFootballTotal
                 
                 if (mainWindow.cbFirstTimeInAllTotalUnder05.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 0,5 1-й Тайм Всего", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 0,5 1-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAllTotalUnder05, 2, 0, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbFirstTimeInHomeTotalUnder05.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 0,5 1-й Тайм Дома", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 0,5 1-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInHomeTotalUnder05, 2, 1, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbFirstTimeInAwayTotalUnder05.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 0,5 1-й Тайм Гости", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 0,5 1-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAwayTotalUnder05, 2, 2, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbFirstTimeInAllTotalUnder25.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 2,5 1-й Тайм Всего", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 2,5 1-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAllTotalUnder25, 2, 0, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbFirstTimeInHomeTotalUnder25.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 2,5 1-й Тайм Дома", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 2,5 1-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInHomeTotalUnder25, 2, 1, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbFirstTimeInAwayTotalUnder25.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 2,5 1-й Тайм Гости", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 2,5 1-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAwayTotalUnder25, 2, 2, 2);
                     mainUrls.Add(mainUrl);
                 }
@@ -158,42 +158,42 @@ namespace ParserFootballTotal
 
                 if (mainWindow.cbSecondTimeInAllTotalUnder05.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 0,5 2-й Тайм Всего", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 0,5 2-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAllTotalUnder05, 3, 0, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbSecondTimeInHomeTotalUnder05.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 0,5 2-й Тайм Дома", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 0,5 2-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInHomeTotalUnder05, 3, 1, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbSecondTimeInAwayTotalUnder05.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 0,5 2-й Тайм Гости", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 0,5 2-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAwayTotalUnder05, 3, 2, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbSecondTimeInAllTotalUnder25.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 2,5 2-й Тайм Всего", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 2,5 2-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAllTotalUnder25, 3, 0, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbSecondTimeInHomeTotalUnder25.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 2,5 2-й Тайм Дома", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 2,5 2-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInHomeTotalUnder25, 3, 1, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbSecondTimeInAwayTotalUnder25.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 2,5 2-й Тайм Гости", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 2,5 2-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAwayTotalUnder25, 3, 2, 2);
                     mainUrls.Add(mainUrl);
                 }
@@ -224,21 +224,21 @@ namespace ParserFootballTotal
                 
                 if (mainWindow.cbAllMatchInAllTotalUnder15.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 1,5 Матч Всего", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 1,5 Матч Всего", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAllTotalUnder15, 0, 0, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbAllMatchInHomeTotalUnder15.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 1,5 Матч Дома", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 1,5 Матч Дома", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInHomeTotalUnder15, 0, 1, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbAllMatchInAwayTotalUnder15.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 1,5 Матч Гости", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 1,5 Матч Гости", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAwayTotalUnder15, 0, 2, 1);
                     mainUrls.Add(mainUrl);
                 }
@@ -266,21 +266,21 @@ namespace ParserFootballTotal
                 
                 if (mainWindow.cbFirstTimeInAllTotalUnder15.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 1,5 1-й Тайм Всего", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 1,5 1-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAllTotalUnder15, 2, 0, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbFirstTimeInHomeTotalUnder15.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 1,5 1-й Тайм Дома", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 1,5 1-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInHomeTotalUnder15, 2, 1, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
                 if (mainWindow.cbFirstTimeInAwayTotalUnder15.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 1,5 1-й Тайм Гости", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 1,5 1-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAwayTotalUnder15, 2, 2, 1);
                     mainUrls.Add(mainUrl);
                 }
@@ -311,7 +311,7 @@ namespace ParserFootballTotal
                 
                 if (mainWindow.cbSecondTimeInAllTotalUnder15.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 1,5 2-й Тайм Всего", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 1,5 2-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAllTotalUnder15, 3, 0, 1);
                     mainUrls.Add(mainUrl);
                 }
@@ -319,14 +319,14 @@ namespace ParserFootballTotal
 
                 if (mainWindow.cbSecondTimeInHomeTotalUnder15.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 1,5 2-й Тайм Дома", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 1,5 2-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInHomeTotalUnder15, 3, 1, 1);
                     mainUrls.Add(mainUrl);
                 }
 
                 if (mainWindow.cbSecondTimeInAwayTotalUnder15.IsChecked == true)
                 {
-                    var mainUrl = new DataContainer("&lt; 1,5 2-й Тайм Гости", "/football/top_streaks/under/",
+                    var mainUrl = new DataContainer("< 1,5 2-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAwayTotalUnder15, 3, 2, 1);
                     mainUrls.Add(mainUrl);
                 }

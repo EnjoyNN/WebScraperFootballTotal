@@ -77,6 +77,7 @@ namespace ParserFootballTotal
                 worksheet2 = package.Workbook.Worksheets[2];
                 worksheetTemp = package.Workbook.Worksheets.Add("TempSheet");
 
+
                 ExcelNamedStyleXml mainStyle = package.Workbook.Styles.CreateNamedStyle("mainStyle");
                 mainStyle = ExcelWork.getExcelStyle("Arial", 11, "", mainStyle);
 
@@ -368,6 +369,11 @@ namespace ParserFootballTotal
                 ExcelRange cell = rangeList[i];
                 cell.Copy(worksheet.Cells[i + 2, 1]);
 
+            }
+
+            for (int i = 2; i < worksheet.Dimension.End.Row + 1; i++)
+            {
+                worksheet.Row(i).Height = 18;
             }
 
             worksheetTemp.Cells[4, 1, worksheetTemp.Dimension.End.Row, worksheetTemp.Dimension.End.Column].Clear();

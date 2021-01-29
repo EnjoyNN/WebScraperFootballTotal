@@ -27,6 +27,9 @@ namespace ParserFootballTotal
                 style.Style.Fill.BackgroundColor.SetColor(ColorTranslator.FromHtml(color));
             }
 
+            style.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+            //style.Style.WrapText = false;
+
             return style;
         }
 
