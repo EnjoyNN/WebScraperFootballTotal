@@ -54,6 +54,8 @@ namespace ParserFootballTotal
                 Browser.Get("https://24score.pro/");
 
                 string currentDate = ExtractHTML.ExtractTagInnerHTML(Browser.Document, "div", "class=\"current_date\"");
+                if (currentDate.Remove(currentDate.IndexOf(" ")).Length == 1)
+                    currentDate = "0" + currentDate;
                 todayDate = DateTime.ParseExact(currentDate, "dd MMMM yyyy",
                     CultureInfo.CreateSpecificCulture("ru-RU"));
 
