@@ -62,5 +62,65 @@ namespace ParserFootballTotal
         public int SettingSecondTimeInAllBothFailedToScore { get; set; }
         public int SettingSecondTimeInHomeBothFailedToScore { get; set; }
         public int SettingSecondTimeInAwayBothFailedToScore { get; set; }
+
+
+
+
+
+        public bool CbAllMatchInAllTotalUnder05 { get; set; }
+        public bool CbAllMatchInHomeTotalUnder05 { get; set; }
+        public bool CbAllMatchInAwayTotalUnder05 { get; set; }
+        public bool CbAllMatchInAllTotalUnder25 { get; set; }
+        public bool CbAllMatchInHomeTotalUnder25 { get; set; }
+        public bool CbAllMatchInAwayTotalUnder25 { get; set; }
+        public bool CbAllMatchInAllFailedToScore { get; set; }
+        public bool CbAllMatchInHomeFailedToScore { get; set; }
+        public bool CbAllMatchInAwayFailedToScore { get; set; }
+        public bool CbFirstTimeInAllTotalUnder05 { get; set; }
+        public bool CbFirstTimeInHomeTotalUnder05 { get; set; }
+        public bool CbFirstTimeInAwayTotalUnder05 { get; set; }
+        public bool CbFirstTimeInAllTotalUnder25 { get; set; }
+        public bool CbFirstTimeInHomeTotalUnder25 { get; set; }
+        public bool CbFirstTimeInAwayTotalUnder25 { get; set; }
+        public bool CbFirstTimeInAllFailedToScore { get; set; }
+        public bool CbFirstTimeInHomeFailedToScore { get; set; }
+        public bool CbFirstTimeInAwayFailedToScore { get; set; }
+        public bool CbSecondTimeInAllTotalUnder05 { get; set; }
+        public bool CbSecondTimeInHomeTotalUnder05 { get; set; }
+        public bool CbSecondTimeInAwayTotalUnder05 { get; set; }
+        public bool CbSecondTimeInAllTotalUnder25 { get; set; }
+        public bool CbSecondTimeInHomeTotalUnder25 { get; set; }
+        public bool CbSecondTimeInAwayTotalUnder25 { get; set; }
+        public bool CbSecondTimeInAllFailedToScore { get; set; }
+        public bool CbSecondTimeInHomeFailedToScore { get; set; }
+        public bool CbSecondTimeInAwayFailedToScore { get; set; }
+        public bool CbAllMatchInAllTotalUnder15 { get; set; }
+        public bool CbAllMatchInHomeTotalUnder15 { get; set; }
+        public bool CbAllMatchInAwayTotalUnder15 { get; set; }
+        public bool CbAllMatchInAllCleanSheets { get; set; }
+        public bool CbAllMatchInHomeCleanSheets { get; set; }
+        public bool CbAllMatchInAwayCleanSheets { get; set; }
+        public bool CbFirstTimeInAllTotalUnder15 { get; set; }
+        public bool CbFirstTimeInHomeTotalUnder15 { get; set; }
+        public bool CbFirstTimeInAwayTotalUnder15 { get; set; }
+        public bool CbFirstTimeInAllCleanSheets { get; set; }
+        public bool CbFirstTimeInHomeCleanSheets { get; set; }
+        public bool CbFirstTimeInAwayCleanSheets { get; set; }
+        public bool CbSecondTimeInAllTotalUnder15 { get; set; }
+        public bool CbSecondTimeInHomeTotalUnder15 { get; set; }
+        public bool CbSecondTimeInAwayTotalUnder15 { get; set; }
+        public bool CbSecondTimeInAllCleanSheets { get; set; }
+        public bool CbSecondTimeInHomeCleanSheets { get; set; }
+        public bool CbSecondTimeInAwayCleanSheets { get; set; }
+        public bool CbAllMatchInAllBothFailedToScore { get; set; }
+        public bool CbAllMatchInHomeBothFailedToScore { get; set; }
+        public bool CbAllMatchInAwayBothFailedToScore { get; set; }
+        public bool CbFirstTimeInAllBothFailedToScore { get; set; }
+        public bool CbFirstTimeInHomeBothFailedToScore { get; set; }
+        public bool CbFirstTimeInAwayBothFailedToScore { get; set; }
+        public bool CbSecondTimeInAllBothFailedToScore { get; set; }
+        public bool CbSecondTimeInHomeBothFailedToScore { get; set; }
+        public bool CbSecondTimeInAwayBothFailedToScore { get; set; }
+
     }
 }

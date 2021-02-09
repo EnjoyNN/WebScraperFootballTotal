@@ -24,49 +24,49 @@ namespace ParserFootballTotal
             mainWindow.Dispatcher.Invoke(() =>
             {
 
-                if (mainWindow.cbAllMatchInAllTotalUnder05.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAllTotalUnder05 == true)
                 {
                     var mainUrl = new DataContainer("< 0,5 Матч Всего", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAllTotalUnder05, 0, 0, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInHomeTotalUnder05.IsChecked == true)
+                if (Settings.Default.cbAllMatchInHomeTotalUnder05 == true)
                 { 
                     var mainUrl = new DataContainer("< 0,5 Матч Дома", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInHomeTotalUnder05, 0, 1, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInAwayTotalUnder05.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAwayTotalUnder05 == true)
                 {
                     var mainUrl = new DataContainer("< 0,5 Матч Гости", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAwayTotalUnder05, 0, 2, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInAllTotalUnder25.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAllTotalUnder25 == true)
                 {
                     var mainUrl = new DataContainer("< 2,5 Матч Всего", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAllTotalUnder25, 0, 0, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInHomeTotalUnder25.IsChecked == true)
+                if (Settings.Default.cbAllMatchInHomeTotalUnder25 == true)
                 {
                     var mainUrl = new DataContainer("< 2,5 Матч Дома", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInHomeTotalUnder25, 0, 1, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInAwayTotalUnder25.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAwayTotalUnder25 == true)
                 {
                     var mainUrl = new DataContainer("< 2,5 Матч Гости", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAwayTotalUnder25, 0, 2, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInAllFailedToScore.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAllFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забив Матч Всего",
                         "/football/top_streaks/failed_to_score/",
@@ -74,7 +74,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInHomeFailedToScore.IsChecked == true)
+                if (Settings.Default.cbAllMatchInHomeFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забив Матч Дома",
                         "/football/top_streaks/failed_to_score/",
@@ -82,7 +82,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInAwayFailedToScore.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAwayFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забив Матч Гости",
                         "/football/top_streaks/failed_to_score/",
@@ -90,49 +90,49 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInAllTotalUnder05.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAllTotalUnder05 == true)
                 {
                     var mainUrl = new DataContainer("< 0,5 1-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAllTotalUnder05, 2, 0, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInHomeTotalUnder05.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInHomeTotalUnder05 == true)
                 {
                     var mainUrl = new DataContainer("< 0,5 1-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInHomeTotalUnder05, 2, 1, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInAwayTotalUnder05.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAwayTotalUnder05 == true)
                 {
                     var mainUrl = new DataContainer("< 0,5 1-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAwayTotalUnder05, 2, 2, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInAllTotalUnder25.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAllTotalUnder25 == true)
                 {
                     var mainUrl = new DataContainer("< 2,5 1-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAllTotalUnder25, 2, 0, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInHomeTotalUnder25.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInHomeTotalUnder25 == true)
                 {
                     var mainUrl = new DataContainer("< 2,5 1-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInHomeTotalUnder25, 2, 1, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInAwayTotalUnder25.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAwayTotalUnder25 == true)
                 {
                     var mainUrl = new DataContainer("< 2,5 1-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAwayTotalUnder25, 2, 2, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInAllFailedToScore.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAllFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забив 1-й Тайм Всего",
                         "/football/top_streaks/failed_to_score/",
@@ -140,7 +140,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInHomeFailedToScore.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInHomeFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забив 1-й Тайм Дома",
                         "/football/top_streaks/failed_to_score/",
@@ -148,7 +148,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInAwayFailedToScore.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAwayFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забив 1-й Тайм Гости",
                         "/football/top_streaks/failed_to_score/",
@@ -156,49 +156,49 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbSecondTimeInAllTotalUnder05.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAllTotalUnder05 == true)
                 {
                     var mainUrl = new DataContainer("< 0,5 2-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAllTotalUnder05, 3, 0, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInHomeTotalUnder05.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInHomeTotalUnder05 == true)
                 {
                     var mainUrl = new DataContainer("< 0,5 2-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInHomeTotalUnder05, 3, 1, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInAwayTotalUnder05.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAwayTotalUnder05 == true)
                 {
                     var mainUrl = new DataContainer("< 0,5 2-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAwayTotalUnder05, 3, 2, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInAllTotalUnder25.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAllTotalUnder25 == true)
                 {
                     var mainUrl = new DataContainer("< 2,5 2-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAllTotalUnder25, 3, 0, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInHomeTotalUnder25.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInHomeTotalUnder25 == true)
                 {
                     var mainUrl = new DataContainer("< 2,5 2-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInHomeTotalUnder25, 3, 1, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInAwayTotalUnder25.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAwayTotalUnder25 == true)
                 {
                     var mainUrl = new DataContainer("< 2,5 2-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAwayTotalUnder25, 3, 2, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInAllFailedToScore.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAllFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забив 2-й Тайм Всего",
                         "/football/top_streaks/failed_to_score/",
@@ -206,7 +206,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInHomeFailedToScore.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInHomeFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забив 2-й Тайм Дома",
                         "/football/top_streaks/failed_to_score/",
@@ -214,7 +214,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInAwayFailedToScore.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAwayFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забив 2-й Тайм Гости",
                         "/football/top_streaks/failed_to_score/",
@@ -222,70 +222,70 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInAllTotalUnder15.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAllTotalUnder15 == true)
                 {
                     var mainUrl = new DataContainer("< 1,5 Матч Всего", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAllTotalUnder15, 0, 0, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInHomeTotalUnder15.IsChecked == true)
+                if (Settings.Default.cbAllMatchInHomeTotalUnder15 == true)
                 {
                     var mainUrl = new DataContainer("< 1,5 Матч Дома", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInHomeTotalUnder15, 0, 1, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInAwayTotalUnder15.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAwayTotalUnder15 == true)
                 {
                     var mainUrl = new DataContainer("< 1,5 Матч Гости", "/football/top_streaks/under/",
                         Settings.Default.settingAllMatchInAwayTotalUnder15, 0, 2, 1);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbAllMatchInAllCleanSheets.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAllCleanSheets == true)
                 {
                     var mainUrl = new DataContainer("Не проп Матч Всего", "/football/top_streaks/clean_sheets/",
                         Settings.Default.settingAllMatchInAllCleanSheets, 0, 0);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInHomeCleanSheets.IsChecked == true)
+                if (Settings.Default.cbAllMatchInHomeCleanSheets == true)
                 {
                     var mainUrl = new DataContainer("Не проп Матч Дома", "/football/top_streaks/clean_sheets/",
                         Settings.Default.settingAllMatchInHomeCleanSheets, 0, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbAllMatchInAwayCleanSheets.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAwayCleanSheets == true)
                 {
                     var mainUrl = new DataContainer("Не проп Матч Гости", "/football/top_streaks/clean_sheets/",
                         Settings.Default.settingAllMatchInAwayCleanSheets, 0, 2);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInAllTotalUnder15.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAllTotalUnder15 == true)
                 {
                     var mainUrl = new DataContainer("< 1,5 1-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAllTotalUnder15, 2, 0, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInHomeTotalUnder15.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInHomeTotalUnder15 == true)
                 {
                     var mainUrl = new DataContainer("< 1,5 1-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInHomeTotalUnder15, 2, 1, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInAwayTotalUnder15.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAwayTotalUnder15 == true)
                 {
                     var mainUrl = new DataContainer("< 1,5 1-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingFirstTimeInAwayTotalUnder15, 2, 2, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInAllCleanSheets.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAllCleanSheets == true)
                 {
                     var mainUrl = new DataContainer("Не проп 1-й Тайм Всего",
                         "/football/top_streaks/clean_sheets/",
@@ -293,7 +293,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbFirstTimeInHomeCleanSheets.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInHomeCleanSheets == true)
                 {
                     var mainUrl = new DataContainer("Не проп 1-й Тайм Дома",
                         "/football/top_streaks/clean_sheets/",
@@ -301,7 +301,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbFirstTimeInAwayCleanSheets.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAwayCleanSheets == true)
                 {
                     var mainUrl = new DataContainer("Не проп 1-й Тайм Гости",
                         "/football/top_streaks/clean_sheets/",
@@ -309,7 +309,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInAllTotalUnder15.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAllTotalUnder15 == true)
                 {
                     var mainUrl = new DataContainer("< 1,5 2-й Тайм Всего", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAllTotalUnder15, 3, 0, 1);
@@ -317,21 +317,21 @@ namespace ParserFootballTotal
                 }
 
 
-                if (mainWindow.cbSecondTimeInHomeTotalUnder15.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInHomeTotalUnder15 == true)
                 {
                     var mainUrl = new DataContainer("< 1,5 2-й Тайм Дома", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInHomeTotalUnder15, 3, 1, 1);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbSecondTimeInAwayTotalUnder15.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAwayTotalUnder15 == true)
                 {
                     var mainUrl = new DataContainer("< 1,5 2-й Тайм Гости", "/football/top_streaks/under/",
                         Settings.Default.settingSecondTimeInAwayTotalUnder15, 3, 2, 1);
                     mainUrls.Add(mainUrl);
                 }
                 
-                if (mainWindow.cbSecondTimeInAllCleanSheets.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAllCleanSheets == true)
                 {
                     var mainUrl = new DataContainer("Не проп 2-й Тайм Всего",
                         "/football/top_streaks/clean_sheets/",
@@ -339,7 +339,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbSecondTimeInHomeCleanSheets.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInHomeCleanSheets == true)
                 {
                     var mainUrl = new DataContainer("Не проп 2-й Тайм Дома",
                         "/football/top_streaks/clean_sheets/",
@@ -347,7 +347,7 @@ namespace ParserFootballTotal
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbSecondTimeInAwayCleanSheets.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAwayCleanSheets == true)
                 {
                     var mainUrl = new DataContainer("Не проп 2-й Тайм Гости",
                         "/football/top_streaks/clean_sheets/",
@@ -368,63 +368,63 @@ namespace ParserFootballTotal
 
             mainWindow.Dispatcher.Invoke(() =>
             {
-                if (mainWindow.cbAllMatchInAllBothFailedToScore.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAllBothFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забивали Оба Всего",
                         Settings.Default.settingAllMatchInAllBothFailedToScore, 0, 0);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbAllMatchInHomeBothFailedToScore.IsChecked == true)
+                if (Settings.Default.cbAllMatchInHomeBothFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забивали Оба Дома",
                         Settings.Default.settingAllMatchInHomeBothFailedToScore, 0, 1);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbAllMatchInAwayBothFailedToScore.IsChecked == true)
+                if (Settings.Default.cbAllMatchInAwayBothFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не забивали Оба Гости",
                         Settings.Default.settingAllMatchInAwayBothFailedToScore, 0, 2);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbFirstTimeInAllBothFailedToScore.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAllBothFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не заб Оба 1-й Т Всего",
                         Settings.Default.settingFirstTimeInAllBothFailedToScore, 1, 0);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbFirstTimeInHomeBothFailedToScore.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInHomeBothFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не заб Оба 1-й Т Дома",
                         Settings.Default.settingFirstTimeInHomeBothFailedToScore, 1, 1);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbFirstTimeInAwayBothFailedToScore.IsChecked == true)
+                if (Settings.Default.cbFirstTimeInAwayBothFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не заб Оба 1-й Т Гости",
                         Settings.Default.settingFirstTimeInAwayBothFailedToScore, 1, 2);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbSecondTimeInAllBothFailedToScore.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAllBothFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не заб Оба 2-й Т Всего",
                         Settings.Default.settingSecondTimeInAllBothFailedToScore, 2, 0);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbSecondTimeInHomeBothFailedToScore.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInHomeBothFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не заб Оба 2-й Т Дома",
                         Settings.Default.settingSecondTimeInHomeBothFailedToScore, 2, 1);
                     mainUrls.Add(mainUrl);
                 }
 
-                if (mainWindow.cbSecondTimeInAwayBothFailedToScore.IsChecked == true)
+                if (Settings.Default.cbSecondTimeInAwayBothFailedToScore == true)
                 {
                     var mainUrl = new DataContainer("Не заб Оба 2-й Т Гости",
                         Settings.Default.settingSecondTimeInAwayBothFailedToScore, 2, 2);
@@ -506,9 +506,12 @@ namespace ParserFootballTotal
 
                                 string currentDate = ExtractHTML.ExtractTagInnerHTML(browMain.Document, "div",
                                     "class=\"current_date\"");
+                                if (currentDate.Remove(currentDate.IndexOf(" ")).Length == 1)
+                                    currentDate = "0" + currentDate;
                                 currentDate = String.Format("{0:dd.MM.yyyy}",
                                     DateTime.ParseExact(currentDate, "dd MMMM yyyy",
                                         CultureInfo.CreateSpecificCulture("ru-RU")));
+
                                 dateMatches.Add(currentDate);
                             }
                         }

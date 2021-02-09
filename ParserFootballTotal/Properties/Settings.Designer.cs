@@ -670,5 +670,816 @@ namespace ParserFootballTotal.Properties {
                 this["settingSecondTimeInAwayBothFailedToScore"] = value;
             }
         }
-    }
+        
+                   [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAllTotalUnder05
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAllTotalUnder05"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAllTotalUnder05"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInHomeTotalUnder05
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInHomeTotalUnder05"]));
+                }
+                set
+                {
+                    this["cbAllMatchInHomeTotalUnder05"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAwayTotalUnder05
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAwayTotalUnder05"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAwayTotalUnder05"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAllTotalUnder25
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAllTotalUnder25"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAllTotalUnder25"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInHomeTotalUnder25
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInHomeTotalUnder25"]));
+                }
+                set
+                {
+                    this["cbAllMatchInHomeTotalUnder25"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAwayTotalUnder25
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAwayTotalUnder25"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAwayTotalUnder25"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAllFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAllFailedToScore"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAllFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInHomeFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInHomeFailedToScore"]));
+                }
+                set
+                {
+                    this["cbAllMatchInHomeFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAwayFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAwayFailedToScore"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAwayFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAllTotalUnder05
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAllTotalUnder05"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAllTotalUnder05"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInHomeTotalUnder05
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInHomeTotalUnder05"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInHomeTotalUnder05"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAwayTotalUnder05
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAwayTotalUnder05"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAwayTotalUnder05"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAllTotalUnder25
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAllTotalUnder25"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAllTotalUnder25"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInHomeTotalUnder25
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInHomeTotalUnder25"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInHomeTotalUnder25"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAwayTotalUnder25
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAwayTotalUnder25"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAwayTotalUnder25"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAllFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAllFailedToScore"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAllFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInHomeFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInHomeFailedToScore"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInHomeFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAwayFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAwayFailedToScore"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAwayFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAllTotalUnder05
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAllTotalUnder05"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAllTotalUnder05"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInHomeTotalUnder05
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInHomeTotalUnder05"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInHomeTotalUnder05"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAwayTotalUnder05
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAwayTotalUnder05"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAwayTotalUnder05"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAllTotalUnder25
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAllTotalUnder25"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAllTotalUnder25"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInHomeTotalUnder25
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInHomeTotalUnder25"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInHomeTotalUnder25"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAwayTotalUnder25
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAwayTotalUnder25"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAwayTotalUnder25"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAllFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAllFailedToScore"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAllFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInHomeFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInHomeFailedToScore"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInHomeFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAwayFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAwayFailedToScore"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAwayFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAllTotalUnder15
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAllTotalUnder15"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAllTotalUnder15"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInHomeTotalUnder15
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInHomeTotalUnder15"]));
+                }
+                set
+                {
+                    this["cbAllMatchInHomeTotalUnder15"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAwayTotalUnder15
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAwayTotalUnder15"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAwayTotalUnder15"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAllCleanSheets
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAllCleanSheets"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAllCleanSheets"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInHomeCleanSheets
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInHomeCleanSheets"]));
+                }
+                set
+                {
+                    this["cbAllMatchInHomeCleanSheets"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAwayCleanSheets
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAwayCleanSheets"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAwayCleanSheets"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAllTotalUnder15
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAllTotalUnder15"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAllTotalUnder15"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInHomeTotalUnder15
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInHomeTotalUnder15"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInHomeTotalUnder15"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAwayTotalUnder15
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAwayTotalUnder15"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAwayTotalUnder15"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAllCleanSheets
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAllCleanSheets"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAllCleanSheets"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInHomeCleanSheets
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInHomeCleanSheets"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInHomeCleanSheets"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAwayCleanSheets
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAwayCleanSheets"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAwayCleanSheets"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAllTotalUnder15
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAllTotalUnder15"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAllTotalUnder15"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInHomeTotalUnder15
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInHomeTotalUnder15"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInHomeTotalUnder15"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAwayTotalUnder15
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAwayTotalUnder15"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAwayTotalUnder15"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAllCleanSheets
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAllCleanSheets"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAllCleanSheets"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInHomeCleanSheets
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInHomeCleanSheets"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInHomeCleanSheets"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAwayCleanSheets
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAwayCleanSheets"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAwayCleanSheets"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAllBothFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAllBothFailedToScore"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAllBothFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInHomeBothFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInHomeBothFailedToScore"]));
+                }
+                set
+                {
+                    this["cbAllMatchInHomeBothFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbAllMatchInAwayBothFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbAllMatchInAwayBothFailedToScore"]));
+                }
+                set
+                {
+                    this["cbAllMatchInAwayBothFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAllBothFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAllBothFailedToScore"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAllBothFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInHomeBothFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInHomeBothFailedToScore"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInHomeBothFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbFirstTimeInAwayBothFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbFirstTimeInAwayBothFailedToScore"]));
+                }
+                set
+                {
+                    this["cbFirstTimeInAwayBothFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAllBothFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAllBothFailedToScore"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAllBothFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInHomeBothFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInHomeBothFailedToScore"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInHomeBothFailedToScore"] = value;
+                }
+            }
+
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("False")]
+            public bool cbSecondTimeInAwayBothFailedToScore
+            {
+                get
+                {
+                    return ((bool)(this["cbSecondTimeInAwayBothFailedToScore"]));
+                }
+                set
+                {
+                    this["cbSecondTimeInAwayBothFailedToScore"] = value;
+                }
+            }
+
+        }
 }

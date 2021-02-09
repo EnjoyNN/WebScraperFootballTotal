@@ -54,6 +54,8 @@ namespace ParserFootballTotal
                 Browser.Get("https://24score.pro/");
 
                 string currentDate = ExtractHTML.ExtractTagInnerHTML(Browser.Document, "div", "class=\"current_date\"");
+                if (currentDate.Remove(currentDate.IndexOf(" ")).Length == 1)
+                    currentDate = "0" + currentDate;
                 todayDate = DateTime.ParseExact(currentDate, "dd MMMM yyyy",
                     CultureInfo.CreateSpecificCulture("ru-RU"));
 
@@ -68,7 +70,7 @@ namespace ParserFootballTotal
                 }
 
                 DateTime dateTime = DateTime.Now;
-                string fileName = "Выгрузка PFT на " + whatIsDay + " " + String.Format("{0:dd.MM.yyyy HH-mm-ss}", dateTime) +
+                string fileName = "Тотал на " + whatIsDay + " " + String.Format("{0:dd.MM.yyyy HH-mm-ss}", dateTime) +
                                   ".xlsx";
                 File.Copy("Шаблон_ParserTotal.xlsx", fileName);
 
@@ -376,7 +378,7 @@ namespace ParserFootballTotal
                 worksheet.Row(i).Height = 18;
             }
 
-            worksheetTemp.Cells[4, 1, worksheetTemp.Dimension.End.Row, worksheetTemp.Dimension.End.Column].Clear();
+            worksheetTemp.Cells[1, 1, worksheetTemp.Dimension.End.Row, worksheetTemp.Dimension.End.Column].Clear();
         }
 
 
