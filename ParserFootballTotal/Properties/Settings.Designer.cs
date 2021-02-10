@@ -130,7 +130,54 @@ namespace ParserFootballTotal.Properties {
                 this["settingAllMatchInAwayFailedToScore"] = value;
             }
         }
-        
+
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int settingAllMatchInAllTotalOver15
+        {
+            get
+            {
+                return ((int)(this["settingAllMatchInAllTotalOver15"]));
+            }
+            set
+            {
+                this["settingAllMatchInAllTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int settingAllMatchInHomeTotalOver15
+        {
+            get
+            {
+                return ((int)(this["settingAllMatchInHomeTotalOver15"]));
+            }
+            set
+            {
+                this["settingAllMatchInHomeTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int settingAllMatchInAwayTotalOver15
+        {
+            get
+            {
+                return ((int)(this["settingAllMatchInAwayTotalOver15"]));
+            }
+            set
+            {
+                this["settingAllMatchInAwayTotalOver15"] = value;
+            }
+        }
+
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
@@ -238,7 +285,54 @@ namespace ParserFootballTotal.Properties {
                 this["settingFirstTimeInAwayFailedToScore"] = value;
             }
         }
-        
+
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int settingFirstTimeInAllTotalOver15
+        {
+            get
+            {
+                return ((int)(this["settingFirstTimeInAllTotalOver15"]));
+            }
+            set
+            {
+                this["settingFirstTimeInAllTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int settingFirstTimeInHomeTotalOver15
+        {
+            get
+            {
+                return ((int)(this["settingFirstTimeInHomeTotalOver15"]));
+            }
+            set
+            {
+                this["settingFirstTimeInHomeTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int settingFirstTimeInAwayTotalOver15
+        {
+            get
+            {
+                return ((int)(this["settingFirstTimeInAwayTotalOver15"]));
+            }
+            set
+            {
+                this["settingFirstTimeInAwayTotalOver15"] = value;
+            }
+        }
+
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
@@ -346,7 +440,53 @@ namespace ParserFootballTotal.Properties {
                 this["settingSecondTimeInAwayFailedToScore"] = value;
             }
         }
-        
+
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int settingSecondTimeInAllTotalOver15
+        {
+            get
+            {
+                return ((int)(this["settingSecondTimeInAllTotalOver15"]));
+            }
+            set
+            {
+                this["settingSecondTimeInAllTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int settingSecondTimeInHomeTotalOver15
+        {
+            get
+            {
+                return ((int)(this["settingSecondTimeInHomeTotalOver15"]));
+            }
+            set
+            {
+                this["settingSecondTimeInHomeTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int settingSecondTimeInAwayTotalOver15
+        {
+            get
+            {
+                return ((int)(this["settingSecondTimeInAwayTotalOver15"]));
+            }
+            set
+            {
+                this["settingSecondTimeInAwayTotalOver15"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
@@ -671,6 +811,17 @@ namespace ParserFootballTotal.Properties {
             }
         }
         
+
+
+
+
+
+
+
+
+
+
+
                    [global::System.Configuration.UserScopedSettingAttribute()]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.Configuration.DefaultSettingValueAttribute("False")]
@@ -806,7 +957,53 @@ namespace ParserFootballTotal.Properties {
                 }
             }
 
-            [global::System.Configuration.UserScopedSettingAttribute()]
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbAllMatchInAllTotalOver15
+        {
+            get
+            {
+                return ((bool)(this["cbAllMatchInAllTotalOver15"]));
+            }
+            set
+            {
+                this["cbAllMatchInAllTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbAllMatchInHomeTotalOver15
+        {
+            get
+            {
+                return ((bool)(this["cbAllMatchInHomeTotalOver15"]));
+            }
+            set
+            {
+                this["cbAllMatchInHomeTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbAllMatchInAwayTotalOver15
+        {
+            get
+            {
+                return ((bool)(this["cbAllMatchInAwayTotalOver15"]));
+            }
+            set
+            {
+                this["cbAllMatchInAwayTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.Configuration.DefaultSettingValueAttribute("False")]
             public bool cbFirstTimeInAllTotalUnder05
@@ -941,7 +1138,53 @@ namespace ParserFootballTotal.Properties {
                 }
             }
 
-            [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbFirstTimeInAllTotalOver15
+        {
+            get
+            {
+                return ((bool)(this["cbFirstTimeInAllTotalOver15"]));
+            }
+            set
+            {
+                this["cbFirstTimeInAllTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbFirstTimeInHomeTotalOver15
+        {
+            get
+            {
+                return ((bool)(this["cbFirstTimeInHomeTotalOver15"]));
+            }
+            set
+            {
+                this["cbFirstTimeInHomeTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbFirstTimeInAwayTotalOver15
+        {
+            get
+            {
+                return ((bool)(this["cbFirstTimeInAwayTotalOver15"]));
+            }
+            set
+            {
+                this["cbFirstTimeInAwayTotalOver15"] = value;
+            }
+        }
+
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.Configuration.DefaultSettingValueAttribute("False")]
             public bool cbSecondTimeInAllTotalUnder05
@@ -1076,7 +1319,52 @@ namespace ParserFootballTotal.Properties {
                 }
             }
 
-            [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbSecondTimeInAllTotalOver15
+        {
+            get
+            {
+                return ((bool)(this["cbSecondTimeInAllTotalOver15"]));
+            }
+            set
+            {
+                this["cbSecondTimeInAllTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbSecondTimeInHomeTotalOver15
+        {
+            get
+            {
+                return ((bool)(this["cbSecondTimeInHomeTotalOver15"]));
+            }
+            set
+            {
+                this["cbSecondTimeInHomeTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool cbSecondTimeInAwayTotalOver15
+        {
+            get
+            {
+                return ((bool)(this["cbSecondTimeInAwayTotalOver15"]));
+            }
+            set
+            {
+                this["cbSecondTimeInAwayTotalOver15"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.Configuration.DefaultSettingValueAttribute("False")]
             public bool cbAllMatchInAllTotalUnder15
@@ -1481,5 +1769,6 @@ namespace ParserFootballTotal.Properties {
                 }
             }
 
-        }
+
+    }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParserFootballTotal"
         mc:Ignorable="d"
-        Title="PARSER FOOTBALL TOTAL" Height="540" Width="1250" Icon="Source/png_ico.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Loaded="Window_Loaded" FontSize="13">
+        Title="PARSER FOOTBALL TOTAL" Height="640" Width="1250" Icon="Source/png_ico.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Loaded="Window_Loaded" FontSize="13">
     <Window.Resources>
         <Style x:Key="textBlockStyle" TargetType="TextBlock">
             <Setter Property="Width" Value="144"/>
@@ -26,8 +26,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="300*"/>
-            <RowDefinition Height="60*"/>
-            <RowDefinition Height="160*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="140*"/>
         </Grid.RowDefinitions>
 
         <Grid Name="gridCheckBoxes" Grid.Row="1" Margin="10" Background="White">
@@ -49,10 +49,13 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
-                <CheckBox Grid.Row="0" Grid.Column="0" x:Name="cbAllMatchInAllTotalUnder05" 
+                <CheckBox x:Name="cbAllMatchInAllTotalUnder05" 
                       Content="&lt; 0,5 Матч Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -60,7 +63,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-                <CheckBox Grid.Row="1" Grid.Column="0" x:Name="cbAllMatchInHomeTotalUnder05" 
+                <CheckBox x:Name="cbAllMatchInHomeTotalUnder05" 
                       Content="&lt; 0,5 Матч Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -68,7 +71,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
-                <CheckBox Grid.Row="2" Grid.Column="0" x:Name="cbAllMatchInAwayTotalUnder05" 
+                <CheckBox x:Name="cbAllMatchInAwayTotalUnder05" 
                       Content="&lt; 0,5 Матч Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -76,7 +79,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal">
-                <CheckBox Grid.Row="3" Grid.Column="0" x:Name="cbAllMatchInAllTotalUnder25"
+                <CheckBox x:Name="cbAllMatchInAllTotalUnder25"
                       Content="&lt; 2,5 Матч Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -84,7 +87,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal">
-                <CheckBox Grid.Row="4" Grid.Column="0" x:Name="cbAllMatchInHomeTotalUnder25" 
+                <CheckBox x:Name="cbAllMatchInHomeTotalUnder25" 
                       Content="&lt; 2,5 Матч Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -92,7 +95,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal">
-                <CheckBox Grid.Row="5" Grid.Column="0" x:Name="cbAllMatchInAwayTotalUnder25" 
+                <CheckBox x:Name="cbAllMatchInAwayTotalUnder25" 
                       Content="&lt; 2,5 Матч Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -100,7 +103,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="6" Grid.Column="0" Orientation="Horizontal">
-                <CheckBox Grid.Row="6" Grid.Column="0" x:Name="cbAllMatchInAllFailedToScore" 
+                <CheckBox x:Name="cbAllMatchInAllFailedToScore" 
                       Content="Не забив Матч Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -108,7 +111,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="7" Grid.Column="0" Orientation="Horizontal">
-                <CheckBox Grid.Row="7" Grid.Column="0" x:Name="cbAllMatchInHomeFailedToScore"
+                <CheckBox x:Name="cbAllMatchInHomeFailedToScore"
                       Content="Не забив Матч Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -116,18 +119,41 @@
             </StackPanel>
 
             <StackPanel Grid.Row="8" Grid.Column="0" Orientation="Horizontal">
-                <CheckBox Grid.Row="8" Grid.Column="0" x:Name="cbAllMatchInAwayFailedToScore" 
+                <CheckBox x:Name="cbAllMatchInAwayFailedToScore" 
                       Content="Не забив Матч Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
                          Name="tbAllMatchInAwayFailedToScore" Margin="5,5,0,5" Width="25" />
             </StackPanel>
 
+            <StackPanel Grid.Row="9" Grid.Column="0" Orientation="Horizontal">
+                <CheckBox x:Name="cbAllMatchInAllTotalOver15" 
+                      Content="&gt; 1,5 Матч Всего" IsChecked="False"/>
+                <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
+                         LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
+                         Name="tbAllMatchInAllTotalOver15" Margin="5,5,0,5" Width="25" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="10" Grid.Column="0" Orientation="Horizontal">
+                <CheckBox x:Name="cbAllMatchInHomeTotalOver15" 
+                      Content="&gt; 1,5 Матч Дома" IsChecked="False"/>
+                <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
+                         LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
+                         Name="tbAllMatchInHomeTotalOver15" Margin="5,5,0,5" Width="25" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="11" Grid.Column="0" Orientation="Horizontal">
+                <CheckBox x:Name="cbAllMatchInAwayTotalOver15" 
+                      Content="&gt; 1,5 Матч Гости" IsChecked="False"/>
+                <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
+                         LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
+                         Name="tbAllMatchInAwayTotalOver15" Margin="5,5,0,5" Width="25" />
+            </StackPanel>
 
 
 
             <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-                <CheckBox Grid.Row="0" Grid.Column="1" x:Name="cbFirstTimeInAllTotalUnder05" 
+                <CheckBox x:Name="cbFirstTimeInAllTotalUnder05" 
                       Content="&lt; 0,5 1-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -135,7 +161,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-                <CheckBox Grid.Row="1" Grid.Column="1" x:Name="cbFirstTimeInHomeTotalUnder05" 
+                <CheckBox x:Name="cbFirstTimeInHomeTotalUnder05" 
                       Content="&lt; 0,5 1-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -143,7 +169,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
-                <CheckBox Grid.Row="2" Grid.Column="1" x:Name="cbFirstTimeInAwayTotalUnder05" 
+                <CheckBox x:Name="cbFirstTimeInAwayTotalUnder05" 
                       Content="&lt; 0,5 1-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -151,7 +177,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
-                <CheckBox Grid.Row="3" Grid.Column="1" x:Name="cbFirstTimeInAllTotalUnder25" 
+                <CheckBox x:Name="cbFirstTimeInAllTotalUnder25" 
                       Content="&lt; 2,5 1-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -159,7 +185,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
-                <CheckBox Grid.Row="4" Grid.Column="1" x:Name="cbFirstTimeInHomeTotalUnder25" 
+                <CheckBox x:Name="cbFirstTimeInHomeTotalUnder25" 
                       Content="&lt; 2,5 1-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -167,7 +193,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
-                <CheckBox Grid.Row="5" Grid.Column="1" x:Name="cbFirstTimeInAwayTotalUnder25"
+                <CheckBox x:Name="cbFirstTimeInAwayTotalUnder25"
                       Content="&lt; 2,5 1-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -175,7 +201,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
-                <CheckBox Grid.Row="6" Grid.Column="1" x:Name="cbFirstTimeInAllFailedToScore" 
+                <CheckBox x:Name="cbFirstTimeInAllFailedToScore" 
                       Content="Не забив 1-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -183,7 +209,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal">
-                <CheckBox Grid.Row="7" Grid.Column="1" x:Name="cbFirstTimeInHomeFailedToScore" 
+                <CheckBox x:Name="cbFirstTimeInHomeFailedToScore" 
                       Content="Не забив 1-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -191,18 +217,42 @@
             </StackPanel>
 
             <StackPanel Grid.Row="8" Grid.Column="1" Orientation="Horizontal">
-                <CheckBox Grid.Row="8" Grid.Column="1" x:Name="cbFirstTimeInAwayFailedToScore" 
+                <CheckBox x:Name="cbFirstTimeInAwayFailedToScore" 
                       Content="Не забив 1-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
                          Name="tbFirstTimeInAwayFailedToScore" Margin="5,5,0,5" Width="25" />
             </StackPanel>
 
+            <StackPanel Grid.Row="9" Grid.Column="1" Orientation="Horizontal">
+                <CheckBox x:Name="cbFirstTimeInAllTotalOver15" 
+                      Content="&gt; 1,5 1-й Тайм Всего" IsChecked="False"/>
+                <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
+                         LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
+                         Name="tbFirstTimeInAllTotalOver15" Margin="5,5,0,5" Width="25" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="10" Grid.Column="1" Orientation="Horizontal">
+                <CheckBox x:Name="cbFirstTimeInHomeTotalOver15" 
+                      Content="&gt; 1,5 1-й Тайм Дома" IsChecked="False"/>
+                <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
+                         LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
+                         Name="tbFirstTimeInHomeTotalOver15" Margin="5,5,0,5" Width="25" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="11" Grid.Column="1" Orientation="Horizontal">
+                <CheckBox x:Name="cbFirstTimeInAwayTotalOver15" 
+                      Content="&gt; 1,5 1-й Тайм Гости" IsChecked="False"/>
+                <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
+                         LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
+                         Name="tbFirstTimeInAwayTotalOver15" Margin="5,5,0,5" Width="25" />
+            </StackPanel>
+
 
 
 
             <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
-                <CheckBox Grid.Row="0" Grid.Column="2" x:Name="cbSecondTimeInAllTotalUnder05" 
+                <CheckBox x:Name="cbSecondTimeInAllTotalUnder05" 
                       Content="&lt; 0,5 2-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -210,7 +260,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
-                <CheckBox Grid.Row="1" Grid.Column="2" x:Name="cbSecondTimeInHomeTotalUnder05" 
+                <CheckBox x:Name="cbSecondTimeInHomeTotalUnder05" 
                       Content="&lt; 0,5 2-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -218,7 +268,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
-                <CheckBox Grid.Row="2" Grid.Column="2" x:Name="cbSecondTimeInAwayTotalUnder05" 
+                <CheckBox x:Name="cbSecondTimeInAwayTotalUnder05" 
                       Content="&lt; 0,5 2-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -226,7 +276,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal">
-                <CheckBox Grid.Row="3" Grid.Column="2" x:Name="cbSecondTimeInAllTotalUnder25"
+                <CheckBox x:Name="cbSecondTimeInAllTotalUnder25"
                       Content="&lt; 2,5 2-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -234,7 +284,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal">
-                <CheckBox Grid.Row="4" Grid.Column="2" x:Name="cbSecondTimeInHomeTotalUnder25" 
+                <CheckBox x:Name="cbSecondTimeInHomeTotalUnder25" 
                       Content="&lt; 2,5 2-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -242,7 +292,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="5" Grid.Column="2" Orientation="Horizontal">
-                <CheckBox Grid.Row="5" Grid.Column="2" x:Name="cbSecondTimeInAwayTotalUnder25"
+                <CheckBox x:Name="cbSecondTimeInAwayTotalUnder25"
                       Content="&lt; 2,5 2-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -250,7 +300,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="6" Grid.Column="2" Orientation="Horizontal">
-                <CheckBox Grid.Row="6" Grid.Column="2" x:Name="cbSecondTimeInAllFailedToScore"
+                <CheckBox x:Name="cbSecondTimeInAllFailedToScore"
                       Content="Не забив 2-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -258,7 +308,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="7" Grid.Column="2" Orientation="Horizontal">
-                <CheckBox Grid.Row="7" Grid.Column="2" x:Name="cbSecondTimeInHomeFailedToScore"
+                <CheckBox x:Name="cbSecondTimeInHomeFailedToScore"
                       Content="Не забив 2-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -266,18 +316,42 @@
             </StackPanel>
 
             <StackPanel Grid.Row="8" Grid.Column="2" Orientation="Horizontal">
-                <CheckBox Grid.Row="8" Grid.Column="2" x:Name="cbSecondTimeInAwayFailedToScore" 
+                <CheckBox x:Name="cbSecondTimeInAwayFailedToScore" 
                       Content="Не забив 2-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
                          Name="tbSecondTimeInAwayFailedToScore" Margin="5,5,0,5" Width="25" />
             </StackPanel>
 
+            <StackPanel Grid.Row="9" Grid.Column="2" Orientation="Horizontal">
+                <CheckBox x:Name="cbSecondTimeInAllTotalOver15" 
+                      Content="&gt; 1,5 2-й Тайм Всего" IsChecked="False"/>
+                <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
+                         LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
+                         Name="tbSecondTimeInAllTotalOver15" Margin="5,5,0,5" Width="25" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="10" Grid.Column="2" Orientation="Horizontal">
+                <CheckBox x:Name="cbSecondTimeInHomeTotalOver15" 
+                      Content="&gt; 1,5 2-й Тайм Дома" IsChecked="False"/>
+                <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
+                         LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
+                         Name="tbSecondTimeInHomeTotalOver15" Margin="5,5,0,5" Width="25" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="11" Grid.Column="2" Orientation="Horizontal">
+                <CheckBox x:Name="cbSecondTimeInAwayTotalOver15" 
+                      Content="&gt; 1,5 2-й Тайм Гости" IsChecked="False"/>
+                <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
+                         LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
+                         Name="tbSecondTimeInAwayTotalOver15" Margin="5,5,0,5" Width="25" />
+            </StackPanel>
 
 
+            
 
             <StackPanel Grid.Row="0" Grid.Column="3" Orientation="Horizontal">
-                <CheckBox Grid.Row="0" Grid.Column="3" x:Name="cbAllMatchInAllTotalUnder15" 
+                <CheckBox x:Name="cbAllMatchInAllTotalUnder15" 
                       Content="&lt; 1,5 Матч Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -285,7 +359,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="3" Orientation="Horizontal">
-                <CheckBox Grid.Row="1" Grid.Column="3" x:Name="cbAllMatchInHomeTotalUnder15" 
+                <CheckBox x:Name="cbAllMatchInHomeTotalUnder15" 
                       Content="&lt; 1,5 Матч Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -293,7 +367,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="2" Grid.Column="3" Orientation="Horizontal">
-                <CheckBox Grid.Row="2" Grid.Column="3" x:Name="cbAllMatchInAwayTotalUnder15" 
+                <CheckBox x:Name="cbAllMatchInAwayTotalUnder15" 
                       Content="&lt; 1,5 Матч Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -301,7 +375,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="3" Grid.Column="3" Orientation="Horizontal">
-                <CheckBox Grid.Row="3" Grid.Column="3" x:Name="cbAllMatchInAllCleanSheets" 
+                <CheckBox x:Name="cbAllMatchInAllCleanSheets" 
                       Content="Не проп Матч Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -309,7 +383,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="4" Grid.Column="3" Orientation="Horizontal">
-                <CheckBox Grid.Row="4" Grid.Column="3" x:Name="cbAllMatchInHomeCleanSheets" 
+                <CheckBox x:Name="cbAllMatchInHomeCleanSheets" 
                       Content="Не проп Матч Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -317,7 +391,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="5" Grid.Column="3" Orientation="Horizontal">
-                <CheckBox Grid.Row="5" Grid.Column="3" x:Name="cbAllMatchInAwayCleanSheets" 
+                <CheckBox x:Name="cbAllMatchInAwayCleanSheets" 
                       Content="Не проп Матч Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -325,7 +399,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="6" Grid.Column="3" Orientation="Horizontal">
-                <CheckBox Grid.Row="6" Grid.Column="3" x:Name="cbAllMatchInAllBothFailedToScore" 
+                <CheckBox x:Name="cbAllMatchInAllBothFailedToScore" 
                       Content="Не забивали Оба Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -333,7 +407,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="7" Grid.Column="3" Orientation="Horizontal">
-                <CheckBox Grid.Row="7" Grid.Column="3" x:Name="cbAllMatchInHomeBothFailedToScore" 
+                <CheckBox x:Name="cbAllMatchInHomeBothFailedToScore" 
                       Content="Не забивали Оба Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -341,7 +415,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="8" Grid.Column="3" Orientation="Horizontal">
-                <CheckBox Grid.Row="8" Grid.Column="3" x:Name="cbAllMatchInAwayBothFailedToScore" 
+                <CheckBox x:Name="cbAllMatchInAwayBothFailedToScore" 
                       Content="Не забивали Оба Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -352,7 +426,7 @@
 
 
             <StackPanel Grid.Row="0" Grid.Column="4" Orientation="Horizontal">
-                <CheckBox Grid.Row="0" Grid.Column="4" x:Name="cbFirstTimeInAllTotalUnder15" 
+                <CheckBox x:Name="cbFirstTimeInAllTotalUnder15" 
                       Content="&lt; 1,5 1-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -360,7 +434,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="4" Orientation="Horizontal">
-                <CheckBox Grid.Row="1" Grid.Column="4" x:Name="cbFirstTimeInHomeTotalUnder15" 
+                <CheckBox x:Name="cbFirstTimeInHomeTotalUnder15" 
                       Content="&lt; 1,5 1-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -368,7 +442,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="2" Grid.Column="4" Orientation="Horizontal">
-                <CheckBox Grid.Row="2" Grid.Column="4" x:Name="cbFirstTimeInAwayTotalUnder15"
+                <CheckBox x:Name="cbFirstTimeInAwayTotalUnder15"
                       Content="&lt; 1,5 1-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -376,7 +450,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="3" Grid.Column="4" Orientation="Horizontal">
-                <CheckBox Grid.Row="3" Grid.Column="4" x:Name="cbFirstTimeInAllCleanSheets" 
+                <CheckBox x:Name="cbFirstTimeInAllCleanSheets" 
                       Content="Не проп 1-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -384,7 +458,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="4" Grid.Column="4" Orientation="Horizontal">
-                <CheckBox Grid.Row="4" Grid.Column="4" x:Name="cbFirstTimeInHomeCleanSheets" 
+                <CheckBox x:Name="cbFirstTimeInHomeCleanSheets" 
                       Content="Не проп 1-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -392,7 +466,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="5" Grid.Column="4" Orientation="Horizontal">
-                <CheckBox Grid.Row="5" Grid.Column="4" x:Name="cbFirstTimeInAwayCleanSheets"
+                <CheckBox x:Name="cbFirstTimeInAwayCleanSheets"
                       Content="Не проп 1-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -400,7 +474,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="6" Grid.Column="4" Orientation="Horizontal">
-                <CheckBox Grid.Row="6" Grid.Column="4" x:Name="cbFirstTimeInAllBothFailedToScore" 
+                <CheckBox x:Name="cbFirstTimeInAllBothFailedToScore" 
                       Content="Не заб Оба 1-й Т Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -408,7 +482,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="7" Grid.Column="4" Orientation="Horizontal">
-                <CheckBox Grid.Row="7" Grid.Column="4" x:Name="cbFirstTimeInHomeBothFailedToScore" 
+                <CheckBox x:Name="cbFirstTimeInHomeBothFailedToScore" 
                       Content="Не заб Оба 1-й Т Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -416,7 +490,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="8" Grid.Column="4" Orientation="Horizontal">
-                <CheckBox Grid.Row="8" Grid.Column="4" x:Name="cbFirstTimeInAwayBothFailedToScore" 
+                <CheckBox x:Name="cbFirstTimeInAwayBothFailedToScore" 
                       Content="Не заб Оба 1-й Т Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -427,7 +501,7 @@
 
 
             <StackPanel Grid.Row="0" Grid.Column="5" Orientation="Horizontal">
-                <CheckBox Grid.Row="0" Grid.Column="5" x:Name="cbSecondTimeInAllTotalUnder15" 
+                <CheckBox x:Name="cbSecondTimeInAllTotalUnder15" 
                       Content="&lt; 1,5 2-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -435,7 +509,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="5" Orientation="Horizontal">
-                <CheckBox Grid.Row="1" Grid.Column="5" x:Name="cbSecondTimeInHomeTotalUnder15" 
+                <CheckBox x:Name="cbSecondTimeInHomeTotalUnder15" 
                       Content="&lt; 1,5 2-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -443,7 +517,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="2" Grid.Column="5" Orientation="Horizontal">
-                <CheckBox Grid.Row="2" Grid.Column="5" x:Name="cbSecondTimeInAwayTotalUnder15" 
+                <CheckBox x:Name="cbSecondTimeInAwayTotalUnder15" 
                       Content="&lt; 1,5 2-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -451,7 +525,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="3" Grid.Column="5" Orientation="Horizontal">
-                <CheckBox Grid.Row="3" Grid.Column="5" x:Name="cbSecondTimeInAllCleanSheets"
+                <CheckBox x:Name="cbSecondTimeInAllCleanSheets"
                       Content="Не проп 2-й Тайм Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -459,7 +533,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="4" Grid.Column="5" Orientation="Horizontal">
-                <CheckBox Grid.Row="4" Grid.Column="5" x:Name="cbSecondTimeInHomeCleanSheets" 
+                <CheckBox x:Name="cbSecondTimeInHomeCleanSheets" 
                       Content="Не проп 2-й Тайм Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -467,7 +541,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="5" Grid.Column="5" Orientation="Horizontal">
-                <CheckBox Grid.Row="5" Grid.Column="5" x:Name="cbSecondTimeInAwayCleanSheets"
+                <CheckBox x:Name="cbSecondTimeInAwayCleanSheets"
                       Content="Не проп 2-й Тайм Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -475,7 +549,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="6" Grid.Column="5" Orientation="Horizontal">
-                <CheckBox Grid.Row="6" Grid.Column="5" x:Name="cbSecondTimeInAllBothFailedToScore" 
+                <CheckBox x:Name="cbSecondTimeInAllBothFailedToScore" 
                       Content="Не заб Оба 2-й Т Всего" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -483,7 +557,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="7" Grid.Column="5" Orientation="Horizontal">
-                <CheckBox Grid.Row="7" Grid.Column="5" x:Name="cbSecondTimeInHomeBothFailedToScore" 
+                <CheckBox x:Name="cbSecondTimeInHomeBothFailedToScore" 
                       Content="Не заб Оба 2-й Т Дома" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"
@@ -491,7 +565,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="8" Grid.Column="5" Orientation="Horizontal">
-                <CheckBox Grid.Row="8" Grid.Column="5" x:Name="cbSecondTimeInAwayBothFailedToScore" 
+                <CheckBox x:Name="cbSecondTimeInAwayBothFailedToScore" 
                       Content="Не заб Оба 2-й Т Гости" IsChecked="False"/>
                 <TextBox PreviewTextInput="NumberValidTextBox" MaxLength="2"
                          LostFocus="DeleteWhitespacesAndSetDefaultWhenLostFocus"

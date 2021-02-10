@@ -89,6 +89,11 @@ namespace ParserFootballTotal
             Settings.Default.settingAllMatchInAllFailedToScore = Convert.ToInt32(tbAllMatchInAllFailedToScore.Text);
             Settings.Default.settingAllMatchInHomeFailedToScore = Convert.ToInt32(tbAllMatchInHomeFailedToScore.Text);
             Settings.Default.settingAllMatchInAwayFailedToScore = Convert.ToInt32(tbAllMatchInAwayFailedToScore.Text);
+
+            Settings.Default.settingAllMatchInAllTotalOver15 = Convert.ToInt32(tbAllMatchInAllTotalOver15.Text);
+            Settings.Default.settingAllMatchInHomeTotalOver15 = Convert.ToInt32(tbAllMatchInHomeTotalOver15.Text);
+            Settings.Default.settingAllMatchInAwayTotalOver15 = Convert.ToInt32(tbAllMatchInAwayTotalOver15.Text);
+
             Settings.Default.settingFirstTimeInAllTotalUnder05 = Convert.ToInt32(tbFirstTimeInAllTotalUnder05.Text);
             Settings.Default.settingFirstTimeInHomeTotalUnder05 = Convert.ToInt32(tbFirstTimeInHomeTotalUnder05.Text);
             Settings.Default.settingFirstTimeInAwayTotalUnder05 = Convert.ToInt32(tbFirstTimeInAwayTotalUnder05.Text);
@@ -98,6 +103,11 @@ namespace ParserFootballTotal
             Settings.Default.settingFirstTimeInAllFailedToScore = Convert.ToInt32(tbFirstTimeInAllFailedToScore.Text);
             Settings.Default.settingFirstTimeInHomeFailedToScore = Convert.ToInt32(tbFirstTimeInHomeFailedToScore.Text);
             Settings.Default.settingFirstTimeInAwayFailedToScore = Convert.ToInt32(tbFirstTimeInAwayFailedToScore.Text);
+
+            Settings.Default.settingFirstTimeInAllTotalOver15 = Convert.ToInt32(tbFirstTimeInAllTotalOver15.Text);
+            Settings.Default.settingFirstTimeInHomeTotalOver15 = Convert.ToInt32(tbFirstTimeInHomeTotalOver15.Text);
+            Settings.Default.settingFirstTimeInAwayTotalOver15 = Convert.ToInt32(tbFirstTimeInAwayTotalOver15.Text);
+
             Settings.Default.settingSecondTimeInAllTotalUnder05 = Convert.ToInt32(tbSecondTimeInAllTotalUnder05.Text);
             Settings.Default.settingSecondTimeInHomeTotalUnder05 = Convert.ToInt32(tbSecondTimeInHomeTotalUnder05.Text);
             Settings.Default.settingSecondTimeInAwayTotalUnder05 = Convert.ToInt32(tbSecondTimeInAwayTotalUnder05.Text);
@@ -107,6 +117,11 @@ namespace ParserFootballTotal
             Settings.Default.settingSecondTimeInAllFailedToScore = Convert.ToInt32(tbSecondTimeInAllFailedToScore.Text);
             Settings.Default.settingSecondTimeInHomeFailedToScore = Convert.ToInt32(tbSecondTimeInHomeFailedToScore.Text);
             Settings.Default.settingSecondTimeInAwayFailedToScore = Convert.ToInt32(tbSecondTimeInAwayFailedToScore.Text);
+
+            Settings.Default.settingSecondTimeInAllTotalOver15 = Convert.ToInt32(tbSecondTimeInAllTotalOver15.Text);
+            Settings.Default.settingSecondTimeInHomeTotalOver15 = Convert.ToInt32(tbSecondTimeInHomeTotalOver15.Text);
+            Settings.Default.settingSecondTimeInAwayTotalOver15 = Convert.ToInt32(tbSecondTimeInAwayTotalOver15.Text);
+
             Settings.Default.settingAllMatchInAllTotalUnder15 = Convert.ToInt32(tbAllMatchInAllTotalUnder15.Text);
             Settings.Default.settingAllMatchInHomeTotalUnder15 = Convert.ToInt32(tbAllMatchInHomeTotalUnder15.Text);
             Settings.Default.settingAllMatchInAwayTotalUnder15 = Convert.ToInt32(tbAllMatchInAwayTotalUnder15.Text);
@@ -144,6 +159,11 @@ namespace ParserFootballTotal
             Settings.Default.cbAllMatchInAllFailedToScore = (bool)cbAllMatchInAllFailedToScore.IsChecked;
             Settings.Default.cbAllMatchInHomeFailedToScore = (bool)cbAllMatchInHomeFailedToScore.IsChecked;
             Settings.Default.cbAllMatchInAwayFailedToScore = (bool)cbAllMatchInAwayFailedToScore.IsChecked;
+
+            Settings.Default.cbAllMatchInAllTotalOver15 = (bool)cbAllMatchInAllTotalOver15.IsChecked;
+            Settings.Default.cbAllMatchInHomeTotalOver15 = (bool)cbAllMatchInHomeTotalOver15.IsChecked;
+            Settings.Default.cbAllMatchInAwayTotalOver15 = (bool)cbAllMatchInAwayTotalOver15.IsChecked;
+
             Settings.Default.cbFirstTimeInAllTotalUnder05 = (bool)cbFirstTimeInAllTotalUnder05.IsChecked;
             Settings.Default.cbFirstTimeInHomeTotalUnder05 = (bool)cbFirstTimeInHomeTotalUnder05.IsChecked;
             Settings.Default.cbFirstTimeInAwayTotalUnder05 = (bool)cbFirstTimeInAwayTotalUnder05.IsChecked;
@@ -153,6 +173,11 @@ namespace ParserFootballTotal
             Settings.Default.cbFirstTimeInAllFailedToScore = (bool)cbFirstTimeInAllFailedToScore.IsChecked;
             Settings.Default.cbFirstTimeInHomeFailedToScore = (bool)cbFirstTimeInHomeFailedToScore.IsChecked;
             Settings.Default.cbFirstTimeInAwayFailedToScore = (bool)cbFirstTimeInAwayFailedToScore.IsChecked;
+
+            Settings.Default.cbFirstTimeInAllTotalOver15 = (bool)cbFirstTimeInAllTotalOver15.IsChecked;
+            Settings.Default.cbFirstTimeInHomeTotalOver15 = (bool)cbFirstTimeInHomeTotalOver15.IsChecked;
+            Settings.Default.cbFirstTimeInAwayTotalOver15 = (bool)cbFirstTimeInAwayTotalOver15.IsChecked;
+
             Settings.Default.cbSecondTimeInAllTotalUnder05 = (bool)cbSecondTimeInAllTotalUnder05.IsChecked;
             Settings.Default.cbSecondTimeInHomeTotalUnder05 = (bool)cbSecondTimeInHomeTotalUnder05.IsChecked;
             Settings.Default.cbSecondTimeInAwayTotalUnder05 = (bool)cbSecondTimeInAwayTotalUnder05.IsChecked;
@@ -162,6 +187,11 @@ namespace ParserFootballTotal
             Settings.Default.cbSecondTimeInAllFailedToScore = (bool)cbSecondTimeInAllFailedToScore.IsChecked;
             Settings.Default.cbSecondTimeInHomeFailedToScore = (bool)cbSecondTimeInHomeFailedToScore.IsChecked;
             Settings.Default.cbSecondTimeInAwayFailedToScore = (bool)cbSecondTimeInAwayFailedToScore.IsChecked;
+
+            Settings.Default.cbSecondTimeInAllTotalOver15 = (bool)cbSecondTimeInAllTotalOver15.IsChecked;
+            Settings.Default.cbSecondTimeInHomeTotalOver15 = (bool)cbSecondTimeInHomeTotalOver15.IsChecked;
+            Settings.Default.cbSecondTimeInAwayTotalOver15 = (bool)cbSecondTimeInAwayTotalOver15.IsChecked;
+
             Settings.Default.cbAllMatchInAllTotalUnder15 = (bool)cbAllMatchInAllTotalUnder15.IsChecked;
             Settings.Default.cbAllMatchInHomeTotalUnder15 = (bool)cbAllMatchInHomeTotalUnder15.IsChecked;
             Settings.Default.cbAllMatchInAwayTotalUnder15 = (bool)cbAllMatchInAwayTotalUnder15.IsChecked;
@@ -206,6 +236,11 @@ namespace ParserFootballTotal
             xml.SettingAllMatchInAllFailedToScore = Convert.ToInt32(tbAllMatchInAllFailedToScore.Text);
             xml.SettingAllMatchInHomeFailedToScore = Convert.ToInt32(tbAllMatchInHomeFailedToScore.Text);
             xml.SettingAllMatchInAwayFailedToScore = Convert.ToInt32(tbAllMatchInAwayFailedToScore.Text);
+
+            xml.SettingAllMatchInAllTotalOver15 = Convert.ToInt32(tbAllMatchInAllTotalOver15.Text);
+            xml.SettingAllMatchInHomeTotalOver15 = Convert.ToInt32(tbAllMatchInHomeTotalOver15.Text);
+            xml.SettingAllMatchInAwayTotalOver15 = Convert.ToInt32(tbAllMatchInAwayTotalOver15.Text);
+
             xml.SettingFirstTimeInAllTotalUnder05 = Convert.ToInt32(tbFirstTimeInAllTotalUnder05.Text);
             xml.SettingFirstTimeInHomeTotalUnder05 = Convert.ToInt32(tbFirstTimeInHomeTotalUnder05.Text);
             xml.SettingFirstTimeInAwayTotalUnder05 = Convert.ToInt32(tbFirstTimeInAwayTotalUnder05.Text);
@@ -215,6 +250,11 @@ namespace ParserFootballTotal
             xml.SettingFirstTimeInAllFailedToScore = Convert.ToInt32(tbFirstTimeInAllFailedToScore.Text);
             xml.SettingFirstTimeInHomeFailedToScore = Convert.ToInt32(tbFirstTimeInHomeFailedToScore.Text);
             xml.SettingFirstTimeInAwayFailedToScore = Convert.ToInt32(tbFirstTimeInAwayFailedToScore.Text);
+
+            xml.SettingFirstTimeInAllTotalOver15 = Convert.ToInt32(tbFirstTimeInAllTotalOver15.Text);
+            xml.SettingFirstTimeInHomeTotalOver15 = Convert.ToInt32(tbFirstTimeInHomeTotalOver15.Text);
+            xml.SettingFirstTimeInAwayTotalOver15 = Convert.ToInt32(tbFirstTimeInAwayTotalOver15.Text);
+
             xml.SettingSecondTimeInAllTotalUnder05 = Convert.ToInt32(tbSecondTimeInAllTotalUnder05.Text);
             xml.SettingSecondTimeInHomeTotalUnder05 = Convert.ToInt32(tbSecondTimeInHomeTotalUnder05.Text);
             xml.SettingSecondTimeInAwayTotalUnder05 = Convert.ToInt32(tbSecondTimeInAwayTotalUnder05.Text);
@@ -224,6 +264,11 @@ namespace ParserFootballTotal
             xml.SettingSecondTimeInAllFailedToScore = Convert.ToInt32(tbSecondTimeInAllFailedToScore.Text);
             xml.SettingSecondTimeInHomeFailedToScore = Convert.ToInt32(tbSecondTimeInHomeFailedToScore.Text);
             xml.SettingSecondTimeInAwayFailedToScore = Convert.ToInt32(tbSecondTimeInAwayFailedToScore.Text);
+
+            xml.SettingSecondTimeInAllTotalOver15 = Convert.ToInt32(tbSecondTimeInAllTotalOver15.Text);
+            xml.SettingSecondTimeInHomeTotalOver15 = Convert.ToInt32(tbSecondTimeInHomeTotalOver15.Text);
+            xml.SettingSecondTimeInAwayTotalOver15 = Convert.ToInt32(tbSecondTimeInAwayTotalOver15.Text);
+
             xml.SettingAllMatchInAllTotalUnder15 = Convert.ToInt32(tbAllMatchInAllTotalUnder15.Text);
             xml.SettingAllMatchInHomeTotalUnder15 = Convert.ToInt32(tbAllMatchInHomeTotalUnder15.Text);
             xml.SettingAllMatchInAwayTotalUnder15 = Convert.ToInt32(tbAllMatchInAwayTotalUnder15.Text);
@@ -261,6 +306,11 @@ namespace ParserFootballTotal
             xml.CbAllMatchInAllFailedToScore = (bool)cbAllMatchInAllFailedToScore.IsChecked;
             xml.CbAllMatchInHomeFailedToScore = (bool)cbAllMatchInHomeFailedToScore.IsChecked;
             xml.CbAllMatchInAwayFailedToScore = (bool)cbAllMatchInAwayFailedToScore.IsChecked;
+
+            xml.CbAllMatchInAllTotalOver15 = (bool)cbAllMatchInAllTotalOver15.IsChecked;
+            xml.CbAllMatchInHomeTotalOver15 = (bool)cbAllMatchInHomeTotalOver15.IsChecked;
+            xml.CbAllMatchInAwayTotalOver15 = (bool)cbAllMatchInAwayTotalOver15.IsChecked;
+
             xml.CbFirstTimeInAllTotalUnder05 = (bool)cbFirstTimeInAllTotalUnder05.IsChecked;
             xml.CbFirstTimeInHomeTotalUnder05 = (bool)cbFirstTimeInHomeTotalUnder05.IsChecked;
             xml.CbFirstTimeInAwayTotalUnder05 = (bool)cbFirstTimeInAwayTotalUnder05.IsChecked;
@@ -270,6 +320,11 @@ namespace ParserFootballTotal
             xml.CbFirstTimeInAllFailedToScore = (bool)cbFirstTimeInAllFailedToScore.IsChecked;
             xml.CbFirstTimeInHomeFailedToScore = (bool)cbFirstTimeInHomeFailedToScore.IsChecked;
             xml.CbFirstTimeInAwayFailedToScore = (bool)cbFirstTimeInAwayFailedToScore.IsChecked;
+
+            xml.CbFirstTimeInAllTotalOver15 = (bool)cbFirstTimeInAllTotalOver15.IsChecked;
+            xml.CbFirstTimeInHomeTotalOver15 = (bool)cbFirstTimeInHomeTotalOver15.IsChecked;
+            xml.CbFirstTimeInAwayTotalOver15 = (bool)cbFirstTimeInAwayTotalOver15.IsChecked;
+
             xml.CbSecondTimeInAllTotalUnder05 = (bool)cbSecondTimeInAllTotalUnder05.IsChecked;
             xml.CbSecondTimeInHomeTotalUnder05 = (bool)cbSecondTimeInHomeTotalUnder05.IsChecked;
             xml.CbSecondTimeInAwayTotalUnder05 = (bool)cbSecondTimeInAwayTotalUnder05.IsChecked;
@@ -279,6 +334,11 @@ namespace ParserFootballTotal
             xml.CbSecondTimeInAllFailedToScore = (bool)cbSecondTimeInAllFailedToScore.IsChecked;
             xml.CbSecondTimeInHomeFailedToScore = (bool)cbSecondTimeInHomeFailedToScore.IsChecked;
             xml.CbSecondTimeInAwayFailedToScore = (bool)cbSecondTimeInAwayFailedToScore.IsChecked;
+
+            xml.CbSecondTimeInAllTotalOver15 = (bool)cbSecondTimeInAllTotalOver15.IsChecked;
+            xml.CbSecondTimeInHomeTotalOver15 = (bool)cbSecondTimeInHomeTotalOver15.IsChecked;
+            xml.CbSecondTimeInAwayTotalOver15 = (bool)cbSecondTimeInAwayTotalOver15.IsChecked;
+
             xml.CbAllMatchInAllTotalUnder15 = (bool)cbAllMatchInAllTotalUnder15.IsChecked;
             xml.CbAllMatchInHomeTotalUnder15 = (bool)cbAllMatchInHomeTotalUnder15.IsChecked;
             xml.CbAllMatchInAwayTotalUnder15 = (bool)cbAllMatchInAwayTotalUnder15.IsChecked;
@@ -355,6 +415,11 @@ namespace ParserFootballTotal
                 tbAllMatchInAllFailedToScore.Text = xml.SettingAllMatchInAllFailedToScore.ToString();
                 tbAllMatchInHomeFailedToScore.Text = xml.SettingAllMatchInHomeFailedToScore.ToString();
                 tbAllMatchInAwayFailedToScore.Text = xml.SettingAllMatchInAwayFailedToScore.ToString();
+
+                tbAllMatchInAllTotalOver15.Text = xml.SettingAllMatchInAllTotalOver15.ToString();
+                tbAllMatchInHomeTotalOver15.Text = xml.SettingAllMatchInHomeTotalOver15.ToString();
+                tbAllMatchInAwayTotalOver15.Text = xml.SettingAllMatchInAwayTotalOver15.ToString();
+
                 tbFirstTimeInAllTotalUnder05.Text = xml.SettingFirstTimeInAllTotalUnder05.ToString();
                 tbFirstTimeInHomeTotalUnder05.Text = xml.SettingFirstTimeInHomeTotalUnder05.ToString();
                 tbFirstTimeInAwayTotalUnder05.Text = xml.SettingFirstTimeInAwayTotalUnder05.ToString();
@@ -364,6 +429,11 @@ namespace ParserFootballTotal
                 tbFirstTimeInAllFailedToScore.Text = xml.SettingFirstTimeInAllFailedToScore.ToString();
                 tbFirstTimeInHomeFailedToScore.Text = xml.SettingFirstTimeInHomeFailedToScore.ToString();
                 tbFirstTimeInAwayFailedToScore.Text = xml.SettingFirstTimeInAwayFailedToScore.ToString();
+
+                tbFirstTimeInAllTotalOver15.Text = xml.SettingFirstTimeInAllTotalOver15.ToString();
+                tbFirstTimeInHomeTotalOver15.Text = xml.SettingFirstTimeInHomeTotalOver15.ToString();
+                tbFirstTimeInAwayTotalOver15.Text = xml.SettingFirstTimeInAwayTotalOver15.ToString();
+
                 tbSecondTimeInAllTotalUnder05.Text = xml.SettingSecondTimeInAllTotalUnder05.ToString();
                 tbSecondTimeInHomeTotalUnder05.Text = xml.SettingSecondTimeInHomeTotalUnder05.ToString();
                 tbSecondTimeInAwayTotalUnder05.Text = xml.SettingSecondTimeInAwayTotalUnder05.ToString();
@@ -373,6 +443,11 @@ namespace ParserFootballTotal
                 tbSecondTimeInAllFailedToScore.Text = xml.SettingSecondTimeInAllFailedToScore.ToString();
                 tbSecondTimeInHomeFailedToScore.Text = xml.SettingSecondTimeInHomeFailedToScore.ToString();
                 tbSecondTimeInAwayFailedToScore.Text = xml.SettingSecondTimeInAwayFailedToScore.ToString();
+
+                tbSecondTimeInAllTotalOver15.Text = xml.SettingSecondTimeInAllTotalOver15.ToString();
+                tbSecondTimeInHomeTotalOver15.Text = xml.SettingSecondTimeInHomeTotalOver15.ToString();
+                tbSecondTimeInAwayTotalOver15.Text = xml.SettingSecondTimeInAwayTotalOver15.ToString();
+
                 tbAllMatchInAllTotalUnder15.Text = xml.SettingAllMatchInAllTotalUnder15.ToString();
                 tbAllMatchInHomeTotalUnder15.Text = xml.SettingAllMatchInHomeTotalUnder15.ToString();
                 tbAllMatchInAwayTotalUnder15.Text = xml.SettingAllMatchInAwayTotalUnder15.ToString();
@@ -410,6 +485,11 @@ namespace ParserFootballTotal
                 cbAllMatchInAllFailedToScore.IsChecked = xml.CbAllMatchInAllFailedToScore;
                 cbAllMatchInHomeFailedToScore.IsChecked = xml.CbAllMatchInHomeFailedToScore;
                 cbAllMatchInAwayFailedToScore.IsChecked = xml.CbAllMatchInAwayFailedToScore;
+
+                cbAllMatchInAllTotalOver15.IsChecked = xml.CbAllMatchInAllTotalOver15;
+                cbAllMatchInHomeTotalOver15.IsChecked = xml.CbAllMatchInHomeTotalOver15;
+                cbAllMatchInAwayTotalOver15.IsChecked = xml.CbAllMatchInAwayTotalOver15;
+
                 cbFirstTimeInAllTotalUnder05.IsChecked = xml.CbFirstTimeInAllTotalUnder05;
                 cbFirstTimeInHomeTotalUnder05.IsChecked = xml.CbFirstTimeInHomeTotalUnder05;
                 cbFirstTimeInAwayTotalUnder05.IsChecked = xml.CbFirstTimeInAwayTotalUnder05;
@@ -419,6 +499,11 @@ namespace ParserFootballTotal
                 cbFirstTimeInAllFailedToScore.IsChecked = xml.CbFirstTimeInAllFailedToScore;
                 cbFirstTimeInHomeFailedToScore.IsChecked = xml.CbFirstTimeInHomeFailedToScore;
                 cbFirstTimeInAwayFailedToScore.IsChecked = xml.CbFirstTimeInAwayFailedToScore;
+
+                cbFirstTimeInAllTotalOver15.IsChecked = xml.CbFirstTimeInAllTotalOver15;
+                cbFirstTimeInHomeTotalOver15.IsChecked = xml.CbFirstTimeInHomeTotalOver15;
+                cbFirstTimeInAwayTotalOver15.IsChecked = xml.CbFirstTimeInAwayTotalOver15;
+
                 cbSecondTimeInAllTotalUnder05.IsChecked = xml.CbSecondTimeInAllTotalUnder05;
                 cbSecondTimeInHomeTotalUnder05.IsChecked = xml.CbSecondTimeInHomeTotalUnder05;
                 cbSecondTimeInAwayTotalUnder05.IsChecked = xml.CbSecondTimeInAwayTotalUnder05;
@@ -428,6 +513,11 @@ namespace ParserFootballTotal
                 cbSecondTimeInAllFailedToScore.IsChecked = xml.CbSecondTimeInAllFailedToScore;
                 cbSecondTimeInHomeFailedToScore.IsChecked = xml.CbSecondTimeInHomeFailedToScore;
                 cbSecondTimeInAwayFailedToScore.IsChecked = xml.CbSecondTimeInAwayFailedToScore;
+
+                cbSecondTimeInAllTotalOver15.IsChecked = xml.CbSecondTimeInAllTotalOver15;
+                cbSecondTimeInHomeTotalOver15.IsChecked = xml.CbSecondTimeInHomeTotalOver15;
+                cbSecondTimeInAwayTotalOver15.IsChecked = xml.CbSecondTimeInAwayTotalOver15;
+
                 cbAllMatchInAllTotalUnder15.IsChecked = xml.CbAllMatchInAllTotalUnder15;
                 cbAllMatchInHomeTotalUnder15.IsChecked = xml.CbAllMatchInHomeTotalUnder15;
                 cbAllMatchInAwayTotalUnder15.IsChecked = xml.CbAllMatchInAwayTotalUnder15;
@@ -476,6 +566,11 @@ namespace ParserFootballTotal
             tbAllMatchInAllFailedToScore.Text = Settings.Default.settingAllMatchInAllFailedToScore.ToString();
             tbAllMatchInHomeFailedToScore.Text = Settings.Default.settingAllMatchInHomeFailedToScore.ToString();
             tbAllMatchInAwayFailedToScore.Text = Settings.Default.settingAllMatchInAwayFailedToScore.ToString();
+
+            tbAllMatchInAllTotalOver15.Text = Settings.Default.settingAllMatchInAllTotalOver15.ToString();
+            tbAllMatchInHomeTotalOver15.Text = Settings.Default.settingAllMatchInHomeTotalOver15.ToString();
+            tbAllMatchInAwayTotalOver15.Text = Settings.Default.settingAllMatchInAwayTotalOver15.ToString();
+
             tbFirstTimeInAllTotalUnder05.Text = Settings.Default.settingFirstTimeInAllTotalUnder05.ToString();
             tbFirstTimeInHomeTotalUnder05.Text = Settings.Default.settingFirstTimeInHomeTotalUnder05.ToString();
             tbFirstTimeInAwayTotalUnder05.Text = Settings.Default.settingFirstTimeInAwayTotalUnder05.ToString();
@@ -485,6 +580,11 @@ namespace ParserFootballTotal
             tbFirstTimeInAllFailedToScore.Text = Settings.Default.settingFirstTimeInAllFailedToScore.ToString();
             tbFirstTimeInHomeFailedToScore.Text = Settings.Default.settingFirstTimeInHomeFailedToScore.ToString();
             tbFirstTimeInAwayFailedToScore.Text = Settings.Default.settingFirstTimeInAwayFailedToScore.ToString();
+
+            tbFirstTimeInAllTotalOver15.Text = Settings.Default.settingFirstTimeInAllTotalOver15.ToString();
+            tbFirstTimeInHomeTotalOver15.Text = Settings.Default.settingFirstTimeInHomeTotalOver15.ToString();
+            tbFirstTimeInAwayTotalOver15.Text = Settings.Default.settingFirstTimeInAwayTotalOver15.ToString();
+
             tbSecondTimeInAllTotalUnder05.Text = Settings.Default.settingSecondTimeInAllTotalUnder05.ToString();
             tbSecondTimeInHomeTotalUnder05.Text = Settings.Default.settingSecondTimeInHomeTotalUnder05.ToString();
             tbSecondTimeInAwayTotalUnder05.Text = Settings.Default.settingSecondTimeInAwayTotalUnder05.ToString();
@@ -494,6 +594,11 @@ namespace ParserFootballTotal
             tbSecondTimeInAllFailedToScore.Text = Settings.Default.settingSecondTimeInAllFailedToScore.ToString();
             tbSecondTimeInHomeFailedToScore.Text = Settings.Default.settingSecondTimeInHomeFailedToScore.ToString();
             tbSecondTimeInAwayFailedToScore.Text = Settings.Default.settingSecondTimeInAwayFailedToScore.ToString();
+
+            tbSecondTimeInAllTotalOver15.Text = Settings.Default.settingSecondTimeInAllTotalOver15.ToString();
+            tbSecondTimeInHomeTotalOver15.Text = Settings.Default.settingSecondTimeInHomeTotalOver15.ToString();
+            tbSecondTimeInAwayTotalOver15.Text = Settings.Default.settingSecondTimeInAwayTotalOver15.ToString();
+
             tbAllMatchInAllTotalUnder15.Text = Settings.Default.settingAllMatchInAllTotalUnder15.ToString();
             tbAllMatchInHomeTotalUnder15.Text = Settings.Default.settingAllMatchInHomeTotalUnder15.ToString();
             tbAllMatchInAwayTotalUnder15.Text = Settings.Default.settingAllMatchInAwayTotalUnder15.ToString();
@@ -531,6 +636,11 @@ namespace ParserFootballTotal
             cbAllMatchInAllFailedToScore.IsChecked = Settings.Default.cbAllMatchInAllFailedToScore;
             cbAllMatchInHomeFailedToScore.IsChecked = Settings.Default.cbAllMatchInHomeFailedToScore;
             cbAllMatchInAwayFailedToScore.IsChecked = Settings.Default.cbAllMatchInAwayFailedToScore;
+
+            cbAllMatchInAllTotalOver15.IsChecked = Settings.Default.cbAllMatchInAllTotalOver15;
+            cbAllMatchInHomeTotalOver15.IsChecked = Settings.Default.cbAllMatchInHomeTotalOver15;
+            cbAllMatchInAwayTotalOver15.IsChecked = Settings.Default.cbAllMatchInAwayTotalOver15;
+
             cbFirstTimeInAllTotalUnder05.IsChecked = Settings.Default.cbFirstTimeInAllTotalUnder05;
             cbFirstTimeInHomeTotalUnder05.IsChecked = Settings.Default.cbFirstTimeInHomeTotalUnder05;
             cbFirstTimeInAwayTotalUnder05.IsChecked = Settings.Default.cbFirstTimeInAwayTotalUnder05;
@@ -540,6 +650,11 @@ namespace ParserFootballTotal
             cbFirstTimeInAllFailedToScore.IsChecked = Settings.Default.cbFirstTimeInAllFailedToScore;
             cbFirstTimeInHomeFailedToScore.IsChecked = Settings.Default.cbFirstTimeInHomeFailedToScore;
             cbFirstTimeInAwayFailedToScore.IsChecked = Settings.Default.cbFirstTimeInAwayFailedToScore;
+
+            cbFirstTimeInAllTotalOver15.IsChecked = Settings.Default.cbFirstTimeInAllTotalOver15;
+            cbFirstTimeInHomeTotalOver15.IsChecked = Settings.Default.cbFirstTimeInHomeTotalOver15;
+            cbFirstTimeInAwayTotalOver15.IsChecked = Settings.Default.cbFirstTimeInAwayTotalOver15;
+
             cbSecondTimeInAllTotalUnder05.IsChecked = Settings.Default.cbSecondTimeInAllTotalUnder05;
             cbSecondTimeInHomeTotalUnder05.IsChecked = Settings.Default.cbSecondTimeInHomeTotalUnder05;
             cbSecondTimeInAwayTotalUnder05.IsChecked = Settings.Default.cbSecondTimeInAwayTotalUnder05;
@@ -549,6 +664,11 @@ namespace ParserFootballTotal
             cbSecondTimeInAllFailedToScore.IsChecked = Settings.Default.cbSecondTimeInAllFailedToScore;
             cbSecondTimeInHomeFailedToScore.IsChecked = Settings.Default.cbSecondTimeInHomeFailedToScore;
             cbSecondTimeInAwayFailedToScore.IsChecked = Settings.Default.cbSecondTimeInAwayFailedToScore;
+
+            cbSecondTimeInAllTotalOver15.IsChecked = Settings.Default.cbSecondTimeInAllTotalOver15;
+            cbSecondTimeInHomeTotalOver15.IsChecked = Settings.Default.cbSecondTimeInHomeTotalOver15;
+            cbSecondTimeInAwayTotalOver15.IsChecked = Settings.Default.cbSecondTimeInAwayTotalOver15;
+
             cbAllMatchInAllTotalUnder15.IsChecked = Settings.Default.cbAllMatchInAllTotalUnder15;
             cbAllMatchInHomeTotalUnder15.IsChecked = Settings.Default.cbAllMatchInHomeTotalUnder15;
             cbAllMatchInAwayTotalUnder15.IsChecked = Settings.Default.cbAllMatchInAwayTotalUnder15;

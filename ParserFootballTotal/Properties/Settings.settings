@@ -29,6 +29,15 @@
     <Setting Name="settingAllMatchInAwayFailedToScore" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
+    <Setting Name="settingAllMatchInAllTotalOver15" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="settingAllMatchInHomeTotalOver15" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="settingAllMatchInAwayTotalOver15" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
     <Setting Name="settingFirstTimeInAllTotalUnder05" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
@@ -56,6 +65,15 @@
     <Setting Name="settingFirstTimeInAwayFailedToScore" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
+    <Setting Name="settingFirstTimeInAllTotalOver15" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="settingFirstTimeInHomeTotalOver15" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="settingFirstTimeInAwayTotalOver15" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
     <Setting Name="settingSecondTimeInAllTotalUnder05" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
@@ -81,6 +99,15 @@
       <Value Profile="(Default)">2</Value>
     </Setting>
     <Setting Name="settingSecondTimeInAwayFailedToScore" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="settingSecondTimeInAllTotalOver15" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="settingSecondTimeInHomeTotalOver15" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="settingSecondTimeInAwayTotalOver15" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
     <Setting Name="settingAllMatchInAllTotalUnder15" Type="System.Int32" Scope="User">
@@ -191,6 +218,15 @@
     <Setting Name="cbAllMatchInAwayFailedToScore" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="cbAllMatchInAllTotalOver15" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cbAllMatchInHomeTotalOver15" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cbAllMatchInAwayTotalOver15" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
     <Setting Name="cbFirstTimeInAllTotalUnder05" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -218,6 +254,15 @@
     <Setting Name="cbFirstTimeInAwayFailedToScore" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="cbFirstTimeInAllTotalOver15" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cbFirstTimeInHomeTotalOver15" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cbFirstTimeInAwayTotalOver15" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
     <Setting Name="cbSecondTimeInAllTotalUnder05" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -243,6 +288,15 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="cbSecondTimeInAwayFailedToScore" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cbSecondTimeInAllTotalOver15" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cbSecondTimeInHomeTotalOver15" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cbSecondTimeInAwayTotalOver15" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="cbAllMatchInAllTotalUnder15" Type="System.Boolean" Scope="User">

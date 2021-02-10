@@ -17,6 +17,9 @@ namespace ParserFootballTotal
         public int SettingAllMatchInAllFailedToScore { get; set; }
         public int SettingAllMatchInHomeFailedToScore { get; set; }
         public int SettingAllMatchInAwayFailedToScore { get; set; }
+        public int SettingAllMatchInAllTotalOver15 { get; set; }
+        public int SettingAllMatchInHomeTotalOver15 { get; set; }
+        public int SettingAllMatchInAwayTotalOver15 { get; set; }
         public int SettingFirstTimeInAllTotalUnder05 { get; set; }
         public int SettingFirstTimeInHomeTotalUnder05 { get; set; }
         public int SettingFirstTimeInAwayTotalUnder05 { get; set; }
@@ -26,6 +29,9 @@ namespace ParserFootballTotal
         public int SettingFirstTimeInAllFailedToScore { get; set; }
         public int SettingFirstTimeInHomeFailedToScore { get; set; }
         public int SettingFirstTimeInAwayFailedToScore { get; set; }
+        public int SettingFirstTimeInAllTotalOver15 { get; set; }
+        public int SettingFirstTimeInHomeTotalOver15 { get; set; }
+        public int SettingFirstTimeInAwayTotalOver15 { get; set; }
         public int SettingSecondTimeInAllTotalUnder05 { get; set; }
         public int SettingSecondTimeInHomeTotalUnder05 { get; set; }
         public int SettingSecondTimeInAwayTotalUnder05 { get; set; }
@@ -35,6 +41,9 @@ namespace ParserFootballTotal
         public int SettingSecondTimeInAllFailedToScore { get; set; }
         public int SettingSecondTimeInHomeFailedToScore { get; set; }
         public int SettingSecondTimeInAwayFailedToScore { get; set; }
+        public int SettingSecondTimeInAllTotalOver15 { get; set; }
+        public int SettingSecondTimeInHomeTotalOver15 { get; set; }
+        public int SettingSecondTimeInAwayTotalOver15 { get; set; }
         public int SettingAllMatchInAllTotalUnder15 { get; set; }
         public int SettingAllMatchInHomeTotalUnder15 { get; set; }
         public int SettingAllMatchInAwayTotalUnder15 { get; set; }
@@ -66,7 +75,6 @@ namespace ParserFootballTotal
 
 
 
-
         public bool CbAllMatchInAllTotalUnder05 { get; set; }
         public bool CbAllMatchInHomeTotalUnder05 { get; set; }
         public bool CbAllMatchInAwayTotalUnder05 { get; set; }
@@ -76,6 +84,9 @@ namespace ParserFootballTotal
         public bool CbAllMatchInAllFailedToScore { get; set; }
         public bool CbAllMatchInHomeFailedToScore { get; set; }
         public bool CbAllMatchInAwayFailedToScore { get; set; }
+        public bool CbAllMatchInAllTotalOver15 { get; set; }
+        public bool CbAllMatchInHomeTotalOver15 { get; set; }
+        public bool CbAllMatchInAwayTotalOver15 { get; set; }
         public bool CbFirstTimeInAllTotalUnder05 { get; set; }
         public bool CbFirstTimeInHomeTotalUnder05 { get; set; }
         public bool CbFirstTimeInAwayTotalUnder05 { get; set; }
@@ -85,6 +96,9 @@ namespace ParserFootballTotal
         public bool CbFirstTimeInAllFailedToScore { get; set; }
         public bool CbFirstTimeInHomeFailedToScore { get; set; }
         public bool CbFirstTimeInAwayFailedToScore { get; set; }
+        public bool CbFirstTimeInAllTotalOver15 { get; set; }
+        public bool CbFirstTimeInHomeTotalOver15 { get; set; }
+        public bool CbFirstTimeInAwayTotalOver15 { get; set; }
         public bool CbSecondTimeInAllTotalUnder05 { get; set; }
         public bool CbSecondTimeInHomeTotalUnder05 { get; set; }
         public bool CbSecondTimeInAwayTotalUnder05 { get; set; }
@@ -94,6 +108,9 @@ namespace ParserFootballTotal
         public bool CbSecondTimeInAllFailedToScore { get; set; }
         public bool CbSecondTimeInHomeFailedToScore { get; set; }
         public bool CbSecondTimeInAwayFailedToScore { get; set; }
+        public bool CbSecondTimeInAllTotalOver15 { get; set; }
+        public bool CbSecondTimeInHomeTotalOver15 { get; set; }
+        public bool CbSecondTimeInAwayTotalOver15 { get; set; }
         public bool CbAllMatchInAllTotalUnder15 { get; set; }
         public bool CbAllMatchInHomeTotalUnder15 { get; set; }
         public bool CbAllMatchInAwayTotalUnder15 { get; set; }
