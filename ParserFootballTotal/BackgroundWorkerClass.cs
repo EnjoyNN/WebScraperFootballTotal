@@ -79,7 +79,6 @@ namespace ParserFootballTotal
                 worksheet2 = package.Workbook.Worksheets[2];
                 worksheetTemp = package.Workbook.Worksheets.Add("TempSheet");
 
-
                 ExcelNamedStyleXml mainStyle = package.Workbook.Styles.CreateNamedStyle("mainStyle");
                 mainStyle = ExcelWork.getExcelStyle("Arial", 11, "", mainStyle);
 
@@ -248,7 +247,6 @@ namespace ParserFootballTotal
             {
                 Console.WriteLine(ex);
             }
-
         }
 
         private void reconnectBrowser(GetRequestt browser, string url)
